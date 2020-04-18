@@ -1,0 +1,31 @@
+{
+    "name": "ttungbmt/nova",
+    "description": "A wonderful administration interface for Laravel.",
+    "keywords": [
+        "laravel",
+        "admin"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Truong Thanh Tung",
+            "email": "ttungbmt@gmail.com"
+        }
+    ],
+    "require": {
+        "laravel/ui": "^2.0",
+        "laravel/passport": "^8.4",
+        "laravel/sanctum": "^2.2",
+        "laravel/scout": "^8.0",
+        "laravel/socialite": "^4.3",
+        "laravel/telescope": "^3.2",
+        "fruitcake/laravel-cors": "^1.0",
+        "creativeorange/gravatar": "^1.0",
+        "barryvdh/laravel-debugbar": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nova\\": "src/"
+        }
+    }
+}
