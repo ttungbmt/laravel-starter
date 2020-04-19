@@ -7,10 +7,14 @@ use Cog\Laravel\Nova\Ban\Actions\Unban;
 use Illuminate\Http\Request;
 use KABBOUCHI\NovaImpersonate\Impersonate;
 use Laravel\Nova\Fields\Gravatar;
+use Laravel\Nova\Fields\Heading;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\MorphToMany;
 use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Text;
 use Maatwebsite\LaravelNovaExcel\Actions\DownloadExcel;
+use Vyuldashev\NovaPermission\PermissionBooleanGroup;
+use Vyuldashev\NovaPermission\RoleBooleanGroup;
 
 class User extends Resource
 {
@@ -37,6 +41,11 @@ class User extends Resource
         'id', 'name', 'email',
     ];
 
+    public static function label()
+    {
+        return __('User');
+    }
+
     /**
      * Get the fields displayed by the resource.
      *
@@ -49,6 +58,7 @@ class User extends Resource
             ID::make()->sortable(),
 
             Gravatar::make()->maxWidth(50),
+
 
             Text::make('Name')
                 ->sortable()
@@ -66,6 +76,9 @@ class User extends Resource
                 ->updateRules('nullable', 'string', 'min:8'),
 
             Impersonate::make($this),
+
+            MorphToMany::make('Roles', 'roles', \Eminiarts\NovaPermissions\Nova\Role::class),
+            MorphToMany::make('Permissions', 'permissions', \Eminiarts\NovaPermissions\Nova\Permission::class),
         ];
     }
 

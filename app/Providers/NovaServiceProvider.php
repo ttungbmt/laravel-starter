@@ -1,11 +1,12 @@
 <?php
-
 namespace App\Providers;
 
 use Illuminate\Support\Facades\Gate;
+
 use Laravel\Nova\Cards\Help;
 use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
+
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -56,7 +57,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function cards()
     {
         return [
-            new Help,
+            new \Vink\NovaCacheCard\CacheCard,
+//            new Help,
 //            new \Marianvlad\NovaEnvCard\NovaEnvCard
         ];
     }
@@ -79,13 +81,25 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function tools()
     {
         return [
+            new \Nibri10\NovaGrid\NovaGrid,
+            new \Eminiarts\NovaPermissions\NovaPermissions,
+//            \Vyuldashev\NovaPermission\NovaPermissionTool::make(),
+            new \ttungbmt\SettingTool\SettingTool,
+//            new \Joedixon\NovaTranslation\NovaTranslation,
+//            new \Digitalcloud\MultilingualNova\NovaLanguageTool,
             new \Infinety\Filemanager\FilemanagerTool,
-            new \Strandafili\NovaInstalledPackages\Tool,
-            new \Christophrumpel\NovaNotifications\NovaNotifications,
-            new \Sbine\RouteViewer\RouteViewer,
-            new \Davidpiesse\NovaPhpinfo\Tool,
-            new \Beyondcode\TinkerTool\Tinker,
-            new \KABBOUCHI\LogsTool\LogsTool,
+//            new \OptimistDigital\MenuBuilder\MenuBuilder,
+//            new \Christophrumpel\NovaNotifications\NovaNotifications,
+//            new \Cendekia\SettingTool\SettingTool,
+//            new \CharlieLangridge\CompileAssets\CompileAssets,
+//            new \KABBOUCHI\LogsTool\LogsTool,
+//            new \Strandafili\NovaInstalledPackages\Tool,
+//            new \Spatie\BackupTool\BackupTool,
+//            new \Sbine\RouteViewer\RouteViewer,
+//            new \Davidpiesse\NovaPhpinfo\Tool,
+//            new \Beyondcode\TinkerTool\Tinker,
+//            new \Bolechen\NovaActivitylog\NovaActivitylog,
+//            new \MadWeb\NovaTelescopeLink\TelescopeLink,
         ];
     }
 

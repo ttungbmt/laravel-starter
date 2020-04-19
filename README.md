@@ -1,79 +1,219 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+Setting
++overrite laravel config (https://github.com/akaunting/setting)
++store json, database
++support locale
++custom driver
++auto-save middleware
++dot save (https://github.com/janiskelemen/laravel-setting)
++extra (https://packagist.org/packages/buzz/laravel-setting)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
 
-## About Laravel
+Nova component k build dc v.5
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+https://github.com/spatie/laravel-flash
+https://laravel-news.com/relationship-events
+https://github.com/davejamesmiller/laravel-breadcrumbs
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+https://laravel-news.com/five-hidden-features-of-the-laravel-excel-package
+https://laravel-news.com/laravel-view-models
+https://github.com/spatie/laravel-view-components
+https://github.com/spatie/laravel-responsecache
+https://github.com/spatie/laravel-schemaless-attributes#adding-the-column-where-the-schemaless-attributes-will-be-stored
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-- [云软科技](http://www.yunruan.ltd/)
+---------------------
+Plugin laravel
+https://packagist.org/packages/jobcerto/nova-grid
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+https://novapackages.com/packages/nsavinov/nova-json-schema-field
+https://novapackages.com/packages/davidpiesse/nova-map
+https://novapackages.com/packages/chris-ware/nova-breadcrumbs
+https://novapackages.com/packages/dillingham/nova-items-field
+https://novapackages.com/packages/timothyasp/nova-badge-field
+https://novapackages.com/packages/philperusse/nova-column-filter
+https://novapackages.com/packages/dmitrybubyakin/nova-medialibrary-field
+https://novapackages.com/packages/techouse/select-auto-complete
+https://novapackages.com/packages/inspheric/nova-email-field
+https://novapackages.com/packages/saumini/count
+https://novapackages.com/packages/alexbowers/nova-prepopulate-searchable
+https://novapackages.com/packages/sparclex/nova-import-card
+https://novapackages.com/packages/ampeco/nova-date-range-filter
+https://novapackages.com/packages/idf/nova-html-card
+https://novapackages.com/packages/vink/nova-cache-card
+https://novapackages.com/packages/khalin/nova-link-field
+https://novapackages.com/packages/bakerkretzmar/nova-settings-tool
+https://novapackages.com/packages/cloudstudio/resource-generator
+https://novapackages.com/packages/davidpiesse/nova-maintenance-mode
+https://novapackages.com/packages/sloveniangooner/searchable-select
+https://novapackages.com/packages/benjacho/belongs-to-many-field
+https://novapackages.com/packages/wehaa/custom-links
+https://novapackages.com/packages/m-a-k-o/nova-custom-table-card
+https://novapackages.com/packages/bissolli/nova-phone-field
+https://novapackages.com/packages/eminiarts/nova-permissions
+https://novapackages.com/packages/dkulyk/nova-tabs
+https://novapackages.com/packages/ebess/nova-collapsible-sidebar
+https://novapackages.com/packages/alexbowers/nova-categorise-resources
+https://novapackages.com/packages/nsavinov/nova-percent-field
+https://novapackages.com/packages/beyondcode/nova-custom-dashboard-card
+https://novapackages.com/packages/joedixon/nova-translation
+https://novapackages.com/packages/guratr/nova-command-runner
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+FIELD
+https://novapackages.com/packages/joshmoreno/nova-html-field
+
+
+https://novapackages.com/packages/elevate-digital/nova-charcounted-fields
+https://novapackages.com/packages/davidpiesse/nova-audio
+https://novapackages.com/packages/manogi/nova-tiptap
+https://novapackages.com/packages/michielkempen/nova-polymorphic-field
+https://novapackages.com/packages/manmohanjit/nova-belongs-to-dependency
+https://novapackages.com/packages/dniccum/phone-number
+https://novapackages.com/packages/gkermer/nova-text-auto-complete
+https://novapackages.com/packages/drobee/nova-sluggable
+https://novapackages.com/packages/genealabs/nova-map-marker-field
+https://novapackages.com/packages/dillingham/nova-ajax-select
+https://novapackages.com/packages/silvanite/nova-field-cloudinary
+https://novapackages.com/packages/mdixon18/fontawesome
+https://novapackages.com/packages/digital-creative/conditional-container
+https://novapackages.com/packages/philperusse/nova-tooltip-field
+https://novapackages.com/packages/naif/toggle
+https://novapackages.com/packages/saumini/ellipsis-textarea
+https://novapackages.com/packages/ajhaupt7/image-upload-preview
+https://novapackages.com/packages/digitalcloud/nova-page-builder-field
+https://novapackages.com/packages/nova-fields/rating
+https://novapackages.com/packages/digitalcloud/nova-resource-notes
+https://novapackages.com/packages/shivanshrajpoot/nova-create-or-add
+https://novapackages.com/packages/satoved/percentage
+https://novapackages.com/packages/halimtuhu/array-images
+https://novapackages.com/packages/remipou/nova-page-manager
+https://novapackages.com/packages/optimistdigital/nova-translatable
+https://novapackages.com/packages/digitalcloud/nova-address-field
+https://novapackages.com/packages/kpolicar/nova-date-range
+https://novapackages.com/packages/kirschbaum-development/nova-chartjs
+https://novapackages.com/packages/codebykyle/calculated-field
+https://novapackages.com/packages/wemersonrv/input-mask
+https://novapackages.com/packages/devpartners/auditable-log
+
+https://novapackages.com/packages/digital-creative/nova-filepond
+https://novapackages.com/packages/optimistdigital/nova-notes-field
+https://novapackages.com/packages/metrixinfo/nova-iframe
+https://novapackages.com/packages/guillaumeferron/post-content
+https://novapackages.com/packages/simplesquid/nova-enum-field
+https://novapackages.com/packages/kirschbaum-development/nova-comments
+https://novapackages.com/packages/epartment/nova-unique-ajax-field
+https://novapackages.com/packages/e2consult/novachecklists
+https://novapackages.com/packages/chinleung/nova-autofill
+https://novapackages.com/packages/jameslkingsley/nova-essentials
+https://novapackages.com/packages/rimu/formatted-number
+https://novapackages.com/packages/opanegro/field-nova-password-show-hide
+https://novapackages.com/packages/otrsw/leaflet-map
+https://novapackages.com/packages/sanderbaas/laravel-nova-belongsto-dependency
+https://novapackages.com/packages/joshmoreno/nova-html-field
+https://novapackages.com/packages/kukac7/external-url-validator
+https://novapackages.com/packages/ynacorp/nova-swatches
+https://novapackages.com/packages/izi-dev/nova-field-date-picker
+https://novapackages.com/packages/pdmfc/nova-action-button
+https://novapackages.com/packages/skoyah/nova-toasted
+https://novapackages.com/packages/day4/cloudinary
+https://novapackages.com/packages/bessamu/ajax-multiselect-nova-field
+
+FILTER
+https://novapackages.com/packages/64robots/nova-date-filter
+https://novapackages.com/packages/digital-creative/nova-range-input-filter
+
+
+CARD
+https://novapackages.com/packages/marianvlad/nova-env-card
+https://novapackages.com/packages/pdmfc/nova-info-card
+https://novapackages.com/packages/vemcogroup/nova-charts
+
+TOOL
+https://novapackages.com/packages/simonhamp/laravel-nova-csv-import
+https://novapackages.com/packages/tightenco/nova-releases
+https://novapackages.com/packages/kristories/novassport (Error)
+https://novapackages.com/packages/digital-creative/collapsible-resource-manager
+https://novapackages.com/packages/classic-o/nova-media-library
+https://novapackages.com/packages/dniccum/nova-documentation
+https://github.com/GeneaLabs/nova-telescope
+https://novapackages.com/packages/inani/laravel-nova-configuration
+https://novapackages.com/packages/pktharindu/nova-permissions
+https://novapackages.com/packages/saintsystems/nova-resource-group-menu
+https://novapackages.com/packages/naif/nova-push-notification
+https://novapackages.com/packages/tightenco/nova-package-discovery
+https://novapackages.com/packages/hnassr/nova-key-value
+https://novapackages.com/packages/gabrieliuga/laravel-nova-sidebar-links
+https://novapackages.com/packages/optimistdigital/nova-redirects
+https://novapackages.com/packages/energon7/nova-menu-builder
+https://novapackages.com/packages/eboye/laravel-nova-translation-editor
+https://novapackages.com/packages/day4/tree-view
+
+
+
+RESOURCE
+https://novapackages.com/packages/anaseqal/nova-import
+https://novapackages.com/packages/optimistdigital/nova-sortable
+https://novapackages.com/packages/lifeonscreen/nova-sort-relations
+https://novapackages.com/packages/klepak/nova-multiselect-filter
+https://novapackages.com/packages/digital-creative/nova-mega-filter
+https://novapackages.com/packages/ericlagarda/novalinkresource
+https://novapackages.com/packages/digital-creative/resource-navigation-tab
+https://novapackages.com/packages/invato/redirect-to-index
+https://novapackages.com/packages/mattsplat/readmore
+https://novapackages.com/packages/suenerds/nova-searchable-belongs-to-filter
+https://novapackages.com/packages/tanmuhittin/nova-left-resource-index-links
+https://novapackages.com/packages/flagstudio/nova-actions-left
+https://novapackages.com/packages/achalj09/editresource
+https://novapackages.com/packages/opanegro/nova-custom-controller
+https://novapackages.com/packages/skoyah/nova-toasted
+
+SIDEBAR
+https://novapackages.com/packages/digital-creative/collapsible-resource-manager
+
+
+
+
+
+
+
+
+https://laravelcollective.com/docs/6.0/html
+https://github.com/barryvdh/laravel-debugbar
+https://laravel-excel.com/
+https://github.com/fruitcake/laravel-cors
+https://github.com/jenssegers/agent
+https://github.com/webpatser/laravel-uuid
+https://yajrabox.com/docs/laravel-datatables/master
+https://github.com/rap2hpoutre/laravel-log-viewer
+https://github.com/spatie/laravel-fractal
+https://github.com/cviebrock/eloquent-sluggable
+https://github.com/spatie/laravel-backup
+https://github.com/laracasts/PHP-Vars-To-Js-Transformer
+https://github.com/spatie/activitylog
+https://github.com/spatie/laravel-medialibrary
+https://github.com/Chumper/Zipper
+https://github.com/mstaack/laravel-postgis
+https://github.com/Xethron/migrations-generator
+https://github.com/owen-it/laravel-auditing
+https://github.com/venturecraft/revisionable#control
+https://github.com/tightenco/ziggy
+https://github.com/lazychaser/laravel-nestedset
+https://github.com/ARCANEDEV/LogViewer
+https://github.com/laracasts/Presenter
+https://github.com/arrilot/laravel-widgets
+https://github.com/barryvdh/laravel-elfinder
+https://github.com/cviebrock/laravel-elasticsearch
+https://github.com/lavary/laravel-menu
+https://github.com/davejamesmiller/laravel-breadcrumbs
+https://github.com/dwightwatson/active

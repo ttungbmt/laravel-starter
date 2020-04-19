@@ -1,0 +1,41 @@
+{
+    "name": "ttungbmt/nova-settings",
+    "description": "An app setting manager tool for laravel nova",
+    "keywords": [
+        "laravel",
+        "nova",
+        "tool",
+        "setting"
+    ],
+    "homepage": "https://github.com/ttungbmt/nova-settings",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Truong Thanh Tung",
+            "email": "ttungbmt@gmail.com"
+        }
+    ],
+    "require": {
+        "anlutro/l4-settings": "^0.11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ttungbmt\\SettingTool\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ttungbmt\\SettingTool\\ToolServiceProvider"
+            ],
+            "dont-discover": [
+
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
