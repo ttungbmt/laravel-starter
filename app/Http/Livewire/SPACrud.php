@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Livewire;
 
 use Illuminate\Database\Eloquent\Model;
@@ -16,9 +17,7 @@ class SPACrud extends Component {
 
     public $view = 'index';
 
-  
-
-    public function findModel($id){
+    public function findModel($id) {
         return $this->modelClass::findOrFail($id);
     }
 
@@ -32,23 +31,22 @@ class SPACrud extends Component {
         $this->fill(['form' => $formData]);
     }
 
-    public function create(){
+    public function create() {
         $this->isNew = true;
         $this->view = 'create';
     }
 
-    public function edit($id){
+    public function edit($id) {
         $record = $this->findModel($id);
         $this->fillForm($record);
-    }    
-    
-    public function submit(){
+    }
+
+    public function submit() {
 
     }
 
 
-    public function destroy($id)
-    {
+    public function destroy($id) {
         if ($id) {
             $record = $this->findModel($id);
             $record->delete();
@@ -64,14 +62,14 @@ class SPACrud extends Component {
         $this->resetForm();
     }
 
-    public function handleCreate(){
-        if($this->SPAMode) return redirect($this->getUrl().'/?view=create');
+    public function handleCreate() {
+        if ($this->SPAMode) return redirect($this->getUrl() . '/?view=create');
 
         $this->create();
     }
 
-    public function handleEdit($id){
-        if($this->SPAMode) return redirect($this->getUrl().'/?view=create');
+    public function handleEdit($id) {
+        if ($this->SPAMode) return redirect($this->getUrl() . '/?view=edit&id=' . $id);
 
         $this->isNew = false;
         $this->view = 'edit';
@@ -81,36 +79,37 @@ class SPACrud extends Component {
 
     public function handleSubmit() {
         $this->submit();
-        if($this->SPAMode) return redirect($this->getUrl());
+        if ($this->SPAMode) return redirect($this->getUrl());
 
         $this->resetForm();
         $this->view = 'index';
     }
 
-
-
     protected function view($path) {
-        $id = request('id');
-        $view = request('view');
-
-        if ($view === 'create') {
-            $this->create();
-        } elseif ($view === 'edit' && $id) {
-            $this->edit($id);
+        if (request()->isMethod('get')) {
+            $id = request()->get('id');
+            $view = request()->get('view');
+            if ($view === 'create') {
+                $this->SPAMode = false;
+                $this->handleCreate();
+            } elseif ($view === 'edit' && $id) {
+                $this->SPAMode = false;
+                $this->handleEdit($id);
+            }
         }
 
         return view($path, [
             'data' => $this->modelClass::paginate($this->per_page)
         ]);
     }
-    
+
     public function resetForm() {
         $this->form = [];
         $this->isNew = false;
         $this->resetError();
     }
 
-    protected function getUrl(){
+    protected function getUrl() {
         return (string)Str::of(request()->getPathInfo())->replace('/livewire/message', '');
     }
 

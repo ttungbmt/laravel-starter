@@ -4,7 +4,6 @@ namespace App\Http\Livewire;
 use App\GeoFile as GeoFileModel;
 
 class GeoFile extends SPACrud {
-    protected $SPAMode = true;
     protected $modelClass = GeoFileModel::class;
 
     public function render() {
