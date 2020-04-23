@@ -21,10 +21,6 @@
     <hr>
 
 
-    <livewire:app-form :model="$model"/>
-
-
-
 </div>
 @endsection
 @push('vue')

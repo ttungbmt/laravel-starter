@@ -19,7 +19,7 @@ class GeoFileController extends Controller
     public function create()
     {
         $model = new GeoFile();
-        return view('admin.geo-file.form', compact('model'));
+        return view('admin.geo-file.component', compact('model'));
     }
 
     public function edit($id)

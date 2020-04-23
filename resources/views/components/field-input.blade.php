@@ -9,7 +9,7 @@
             </div>
         @endif
 
-        <input {{$getAttrs($attributes, $errors)}} value="{{old('v.'.$name)}}">
+        <input {{$getAttrs($attributes, $errors)}} value="{{old($name)}}">
 
         @if($append)
             <div class="input-group-append">
@@ -17,7 +17,7 @@
             </div>
         @endif
 
-        @error('v.'.$name)
+        @error($getName($attributes))
             <div class="invalid-feedback">{!! $message !!} </div>
         @enderror
     </div>

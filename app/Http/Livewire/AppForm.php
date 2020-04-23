@@ -14,11 +14,11 @@ class AppForm extends Component
     public $model;
     public $v;
 
-    public function mount(GeoFile $model){
-        $this->model = $model;
-
-        $this->fill(['v' => $this->model->toArray()]);
-    }
+//    public function mount(GeoFile $model){
+//        $this->model = $model;
+//
+//        $this->fill(['v' => $this->model->toArray()]);
+//    }
 
 
     public function submit()

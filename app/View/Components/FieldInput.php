@@ -24,21 +24,30 @@ class FieldInput extends Field
         return view('components.field-input');
     }
 
+    public function getName(ComponentAttributeBag $attrs){
+        if(!$this->name && $model = $attrs->get('w-model')){
+            $this->name =$model;
+        }
+
+        return $this->name;
+    }
+
 
     public function getAttrs(ComponentAttributeBag $attrs, ViewErrorBag $errors)
     {
-        $invalid = $errors->has('v.'.$this->name) ? 'is-invalid' : '';
+        $this->name = $this->getName($attrs);
+
+        if($model = $attrs->get('w-model')){
+            $attrs = $attrs->merge(['wire:model.lazy' => $model])->except(['w-model']);
+        }
+
+        $invalid = $errors->has($this->name) ? 'is-invalid' : '';
 
         $attrs = $attrs
             ->merge([
-            'class' => (string)Str::of('form-control')->append(" {$invalid}")->trim(),
-            'name' => $this->name,
-        ]);
-
-        if($attrs->get('w-model')){
-            $attrs = $attrs->merge(['wire:model.lazy' => $attrs->get('w-model')])->except(['w-model']);
-
-        }
+                'class' => (string)Str::of('form-control')->append(" {$invalid}")->trim(),
+                'name' => $this->name,
+            ]);
 
         return $attrs;
     }

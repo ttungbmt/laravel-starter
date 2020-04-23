@@ -16,12 +16,12 @@ class CreateGeoFilesTable extends Migration
         Schema::create('geo_files', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('code');
+            $table->string('code')->nullable();
             $table->uuid('uuid')->nullable();
-            $table->string('file_name');
+            $table->string('file_name')->nullable();
             $table->string('mime_type')->nullable();
-            $table->string('disk');
-            $table->unsignedBigInteger('size');
+            $table->string('disk')->nullable();
+            $table->unsignedBigInteger('size')->nullable();
             $table->timestamps();
         });
     }

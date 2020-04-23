@@ -1,4 +1,11 @@
 {
+    "Create": "Thêm mới",
+    "Edit": "Chỉnh sửa",
+    "Update": "Cập nhật",
+    "Delete": "Xóa",
+    "Cancel": "Hủy bỏ",
+    "Action": "Hành động",
+
     "A fresh verification link has been sent to your email address.": "Một đường dẫn xác minh mới đã được gửi đến địa chỉ email của bạn.",
     "All rights reserved.": "All rights reserved",
     "Before proceeding, please check your email for a verification link.": "Trước khi tiếp tục, hãy kiểm tra email của bạn để truy cập vào liên kết xác minh",

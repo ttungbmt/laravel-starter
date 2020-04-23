@@ -2,6 +2,6 @@
 
 @section('content')
     <div class="container">
-        <livewire:geofile-form :model="$model"/>
+        <livewire:geo-file />
     </div>
 @endsection
