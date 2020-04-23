@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\GeoFile;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $model = GeoFile::first();
+        return view('home', compact('model'));
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate(['name' => 'required|email']);
     }
 }

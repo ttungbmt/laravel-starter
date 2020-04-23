@@ -18,9 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::livewire('/app-form', 'app-form');
+Route::livewire('/app-form/{model?}', 'app-form');
+
+//Route::resource('/geo-file', 'GeoFileController')->except(['update', 'store']);
+//Route::livewire('/geo-file', 'geofile-form');
+//Route::livewire('/geo-file/form/{model?}', 'geofile-form');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/home', 'HomeController@store');
 
 Auth::routes();
 

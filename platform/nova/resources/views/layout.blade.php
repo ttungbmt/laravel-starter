@@ -13,6 +13,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('app.css', 'vendor/nova') }}">
 
+
+
     <!-- Tool Styles -->
     @foreach(\Laravel\Nova\Nova::availableStyles(request()) as $name => $path)
         <link rel="stylesheet" href="/nova-api/styles/{{ $name }}">

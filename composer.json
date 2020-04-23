@@ -9,7 +9,6 @@
     "license": "MIT",
     "require": {
         "php": "^7.4",
-        "barryvdh/laravel-debugbar": "^3.3",
         "beyondcode/nova-tinker-tool": "^1.1",
         "bolechen/nova-activitylog": "^0.2.1",
         "charlielangridge/nova-compile-assets": "^0.1.0",

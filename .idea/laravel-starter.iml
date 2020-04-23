@@ -60,6 +60,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/infinety-es/nova-filemanager" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/inspheric/nova-url-field" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/intervention/image" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jaybizzle/crawler-detect" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jenssegers/agent" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/joedixon/laravel-translation" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/joedixon/nova-translation" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/joshdifabio/composed" />
@@ -72,7 +74,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-zendframework-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/helpers" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/nova" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/passport" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/sanctum" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/scout" />
@@ -87,6 +88,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/glide" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/oauth1-client" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/oauth2-server" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/livewire/livewire" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/maatwebsite/excel" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/maatwebsite/laravel-nova-excel" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mad-web/nova-telescope-link" />
@@ -95,6 +97,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/markbaker/complex" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/markbaker/matrix" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/maximebf/debugbar" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mobiledetect/mobiledetectlib" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/moontoast/math" />
@@ -199,7 +202,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/timothyasp/nova-color-field" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/ttungbmt/nova-settings" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vink/nova-cache-card" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/voku/portable-ascii" />
@@ -208,7 +210,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/whitecube/nova-flexible-content" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/wikimedia/composer-merge-plugin" />
     </content>
-    <content url="file://$MODULE_DIR$/node_modules" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

@@ -13,11 +13,39 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
                     You are logged in!
                 </div>
             </div>
         </div>
     </div>
+    <hr>
+
+
+    <livewire:app-form :model="$model"/>
+
+
+
 </div>
 @endsection
+@push('vue')
+   {{-- <script>
+        let file
+        Vue.component('v-app', {
+            data() {
+                return {
+                    m: @json($files)
+                }
+            },
+             methods: {
+                 submit(e){
+                    axios.post('/home', {
+                        data: {
+                            ...this.m
+                        }
+                    })
+                 }
+             }
+        })
+    </script>--}}
+@endpush
+

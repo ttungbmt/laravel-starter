@@ -95,7 +95,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 //            new \KABBOUCHI\LogsTool\LogsTool,
 //            new \Strandafili\NovaInstalledPackages\Tool,
 //            new \Spatie\BackupTool\BackupTool,
-//            new \Sbine\RouteViewer\RouteViewer,
+            new \Sbine\RouteViewer\RouteViewer,
 //            new \Davidpiesse\NovaPhpinfo\Tool,
 //            new \Beyondcode\TinkerTool\Tinker,
 //            new \Bolechen\NovaActivitylog\NovaActivitylog,

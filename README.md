@@ -1,3 +1,13 @@
+Tham khảo setting
+https://demo.laravel-bap.com/dashboard
+https://bedrive.vebto.com/admin/files
+
+Tham khảo ql File
+https://demo.zfiles.shicosoft.com/user/admin-demo
+
+
+
+
 Setting
 +overrite laravel config (https://github.com/akaunting/setting)
 +store json, database
@@ -9,10 +19,26 @@ Setting
 
 
 Nova component k build dc v.5
+---------------------
+GRID
+https://leantony.github.io/laravel-grid/modals.html
+
+
+SOURCE tham khảo
+https://github.com/z-song/laravel-admin
+https://github.com/matthewtrask/vue-laravel-forms
+https://github.com/chantouchsek/laravel-vue-form-validator
+
+https://github.com/shipu/themevel/?utm_source=learninglaravel.net
 
 
 
+-----------------
+https://libs.garden/laravel?sort=popular&page=4
 
+
+
+https://www.vuetable.com/#current-version
 
 https://github.com/spatie/laravel-flash
 https://laravel-news.com/relationship-events
