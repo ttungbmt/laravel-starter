@@ -7,13 +7,13 @@ use Illuminate\View\Component;
 class Form extends Component
 {
     public $method;
-    public $summaryErrors ;
+    public $summaryErrors;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($method = 'GET', $summaryErrors = null)
+    public function __construct($method = 'GET', $summaryErrors = true)
     {
         $this->method = $method;
         $this->summaryErrors = $summaryErrors;

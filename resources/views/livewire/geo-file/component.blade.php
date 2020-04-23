@@ -18,15 +18,18 @@
                     <td>
                         <div class="btn-group">
                             <button wire:click="handleEdit({{$row->id}})" class="btn btn-xs btn-warning">{{__('Edit')}}</button>
-                            <button wire:click="destroy({{$row->id}})" class="btn btn-xs btn-danger">{{__('Delete')}}</button>
+                            <button class="btn btn-xs btn-danger" onclick="confirmDelete({{$row->id}})">{{__('Delete')}}</button>
                         </div>
                     </td>
                 </tr>
             @endforeach
         </table>
         {{ $data->links() }}
-
+        
     @elseif($view !== 'index')
         @include('livewire.geo-file.form')
     @endif
+
+    @include('components.confirm-delete')
 </div>
+
