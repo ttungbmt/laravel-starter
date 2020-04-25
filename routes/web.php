@@ -20,9 +20,9 @@ Route::get('/', function () {
 });
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::livewire('/geo-file-form/{model?}', 'geo-file-form')->name('geo-file-form');
-
-Route::view('/geo-file', 'admin.geo-file');
+Route::prefix('admin')->namespace('Admin')->group(function () {
+    Route::resource('geo-file', 'GeoFileController');
+});
 
 Auth::routes();
 

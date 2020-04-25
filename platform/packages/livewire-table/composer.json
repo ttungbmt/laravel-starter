@@ -1,0 +1,38 @@
+{
+    "name": "ttungbmt/livewire-table",
+    "description": "A dynamic, responsive Laravel Livewire table component with searching, sorting, checkboxes, and pagination.",
+    "keywords": [
+        "laravel",
+        "livewire",
+        "table"
+    ],
+    "homepage": "https://github.com/ttungbmt/livewire-table",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Truong Thanh Tung",
+            "email": "ttungbmt@gmail.com"
+        }
+    ],
+    "require": {
+        "yajra/laravel-datatables": "^1.5",
+        "kdion4891/laravel-livewire-tables": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "ttungbmt\\Livewire\\Table\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ttungbmt\\Livewire\\Table\\Providers\\TableServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -1,8 +1,15 @@
 <div>
+
     @if($view === 'index')
-        <div class="form-group">
-            <button wire:click="handleCreate" class="btn btn-primary">{{__('Create')}}</button>
+        <div class="d-flex justify-between">
+            <div>
+
+            </div>
+            <div class="form-group">
+                <button wire:click="handleCreate" class="btn btn-primary">{{__('Create')}}</button>
+            </div>
         </div>
+
 
         <table class="table table-bordered">
             <tr>
@@ -25,7 +32,7 @@
             @endforeach
         </table>
         {{ $data->links() }}
-        
+
     @elseif($view !== 'index')
         @include('livewire.geo-file.form')
     @endif

@@ -24,5 +24,5 @@ mix
 
 mix
     .js('js/app.js', 'js')
-    // .sass('sass/app.scss', 'css')
+    .sass('sass/app.scss', 'css')
 ;

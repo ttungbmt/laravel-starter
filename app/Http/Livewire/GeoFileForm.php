@@ -1,36 +1,22 @@
 <?php
-
 namespace App\Http\Livewire;
+use Kdion4891\LaravelLivewireForms\Field;
+use ttungbmt\Livewire\Table\Column;
+use ttungbmt\Livewire\Table\SPACrudComponent;
 
-use App\GeoFile;
-use Livewire\Component;
-
-class GeoFileForm extends Component
+class GeoFileForm extends SPACrudComponent
 {
-    public $name;
-    public $model;
-//    public $v;
-//    public $count = 0;
-
-    public function mount(GeoFile $model){
-        $this->model = $model;
-//        $this->fill(['v' => $this->model->toArray()]);
-
+    public function columns() {
+        return [
+            Column::make('Id'),
+            Column::make('Name'),
+        ];
     }
 
-    public function submit()
+    public function fields()
     {
-        $data = $this->validate([
-            'name' => 'required'
-        ]);
-
-        $this->model->create($data);
-
-        return redirect('/geo-file-form/'.$this->model->id);
-    }
-
-    public function render()
-    {
-        return view('livewire.geo-file-form');
+        return [
+            Field::make('Name')->input()->rules('required'),
+        ];
     }
 }

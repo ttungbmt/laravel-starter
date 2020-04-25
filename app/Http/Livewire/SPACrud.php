@@ -4,9 +4,13 @@ namespace App\Http\Livewire;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Kdion4891\LaravelLivewireTables\TableComponent;
 use Livewire\Component;
 
-class SPACrud extends Component {
+class SPACrud extends TableComponent {
+    public $checkbox = false;
+    public $checkbox_side = 'left';
+
     protected $modelClass;
     protected $SPAMode = false;
 

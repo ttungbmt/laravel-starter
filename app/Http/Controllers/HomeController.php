@@ -2,18 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\GeoFile;
-use Illuminate\Http\Request;
 
-class HomeController extends Controller
-{
+use App\GeoFile;
+use App\GeoFileManager;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Lang;
+
+
+
+class HomeController extends Controller {
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct() {
         $this->middleware('auth');
     }
 
@@ -22,14 +25,26 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-        $model = GeoFile::first();
-        return view('home', compact('model'));
+    public function index() {
+//        $node = GeoFileManager::create([
+//            'name' => '4',
+//            'children' => [
+//                [
+//                    'name' => '5',
+//                    'children' => [
+//                        [
+//                            'name' => '6'
+//                        ],
+//                    ],
+//                ],
+//            ],
+//        ]);
+
+//        $node = GeoFileManager::withDepth()->having('depth', '=', 1)->get()->toTree()->first();
+        $node = GeoFileManager::with(['file'])->descendantsAndSelf(1)->toTree()->toArray();
+        dd($node);
+        return view('home');
     }
 
-    public function store(Request $request)
-    {
-        $request->validate(['name' => 'required|email']);
-    }
+
 }
