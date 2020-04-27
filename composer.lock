@@ -3402,7 +3402,7 @@
             "dist": {
                 "type": "path",
                 "url": "./platform/nova",
-                "reference": "0dcea25b5213285885d1b671de3585bf18076201"
+                "reference": "e3594da2c5f694e7248fb337b2eb8382e215e93c"
             },
             "require": {
                 "brick/money": "^0.4.2",
@@ -9574,7 +9574,7 @@
             "dist": {
                 "type": "path",
                 "url": "./platform/core",
-                "reference": "0be1dd5c637a07802116ad3cf8c14b794dea5467"
+                "reference": "591d089fb39642652b1b5a3995709808b7de5e57"
             },
             "require": {
                 "barryvdh/laravel-debugbar": "^3.3",
@@ -9619,7 +9619,7 @@
             "dist": {
                 "type": "path",
                 "url": "./platform/packages/nova-settings",
-                "reference": "778a6328a5315584ff2a10a089aa51de63b66236"
+                "reference": "64bce86c1c2c0742df2ba1227e98baaee2bb2347"
             },
             "require": {
                 "anlutro/l4-settings": "^0.11.0"
