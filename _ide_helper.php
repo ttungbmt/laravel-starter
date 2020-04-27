@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 7.8.1 on 2020-04-25 12:34:29.
+ * Generated for Laravel 7.8.1 on 2020-04-27 13:56:37.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -18195,6 +18195,366 @@ namespace Maatwebsite\Excel\Facades {
  
 }
 
+namespace ttungbmt\Laravel\Geoserver { 
+
+    /**
+     * 
+     *
+     */ 
+    class Facade {
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function workspaces()
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->workspaces();
+        }
+        
+        /**
+         * Create the configured workspace, if not existing
+         *
+         * @param string $name
+         * @return \OneOffTech\GeoServer\Models\Workspace 
+         * @throws ErrorResponseException
+         * @uses the workspace specified during client instantiation
+         * @static 
+         */ 
+        public static function createWorkspace($name = '')
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->createWorkspace($name);
+        }
+        
+        /**
+         * Build a GeoServer client
+         *
+         * @param string $url The GeoServer instance URL
+         * @param string $workspace The GeoServer workspace to use
+         * @param \ttungbmt\Laravel\Geoserver\Authentication $authentication The authentication credentials, if necessary
+         * @return \GeoServer 
+         * @static 
+         */ 
+        public static function build($url, $workspace, $authentication = null)
+        {
+                        return \ttungbmt\Laravel\Geoserver\Geoserver::build($url, $workspace, $authentication);
+        }
+        
+        /**
+         * Get the GeoServer version
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function version()
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->version();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function manifest()
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->manifest();
+        }
+        
+        /**
+         * Retrieve the workspace information.
+         *
+         * @uses the workspace specified during client instantiation
+         * @return \OneOffTech\GeoServer\Models\Workspace 
+         * @static 
+         */ 
+        public static function workspace()
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->workspace();
+        }
+        
+        /**
+         * Retrieve the list of datastores defined in the workspace.
+         * 
+         * A data store contains vector format spatial data.
+         *
+         * @uses the workspace specified during client instantiation
+         * @return \OneOffTech\GeoServer\Models\DataStore[] 
+         * @static 
+         */ 
+        public static function datastores()
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->datastores();
+        }
+        
+        /**
+         * Retrieve the details of a data store.
+         * 
+         * A data store contains vector format spatial data. It can be a file (such as a shapefile),...
+         *
+         * @param string $name The data store name
+         * @return \OneOffTech\GeoServer\Models\DataStore 
+         * @throws ErrorResponseException
+         * @throws StoreNotFoundException
+         * @uses the workspace specified during client instantiation
+         * @static 
+         */ 
+        public static function datastore($name)
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->datastore($name);
+        }
+        
+        /**
+         * Delete a data store
+         *
+         * @param string $name The data store name
+         * @return \OneOffTech\GeoServer\Models\DataStore 
+         * @throws \OneOffTech\GeoServer\Exception\StoreNotFoundException if the data store to remove do not exists*@throws ErrorResponseException
+         * @throws ErrorResponseException
+         * @uses the workspace specified during client instantiation
+         * @static 
+         */ 
+        public static function deleteDatastore($name)
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->deleteDatastore($name);
+        }
+        
+        /**
+         * A feature is a vector based spatial resource or data set that originates from a data store.
+         * 
+         * In some cases, such as with a shapefile, a feature type has a one-to-one relationship with its
+         * data store. In other cases, such as PostGIS, the relationship of feature type to data store
+         * is many-to-one, feature types corresponding to a table in the database.
+         *
+         * @param string $datastore The datastore from which retrieve the
+         * @param string $name The feature name to retrieve
+         * @return \OneOffTech\GeoServer\Models\Feature 
+         * @static 
+         */ 
+        public static function feature($datastore, $name = null)
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->feature($datastore, $name);
+        }
+        
+        /**
+         * Retrieve the list of coverage stores defined in the workspace.
+         * 
+         * A data store contains raster format spatial data.
+         *
+         * @uses the workspace specified during client instantiation
+         * @return \OneOffTech\GeoServer\Models\CoverageStore[] 
+         * @static 
+         */ 
+        public static function coveragestores()
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->coveragestores();
+        }
+        
+        /**
+         * Retrieve the details of a coverage store.
+         * 
+         * A coverage store describes how access a raster data source.
+         *
+         * @uses the workspace specified during client instantiation
+         * @param string $name The coverage store name
+         * @return \OneOffTech\GeoServer\Models\CoverageStore 
+         * @static 
+         */ 
+        public static function coveragestore($name)
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->coveragestore($name);
+        }
+        
+        /**
+         * Retrieve the details of a coverage.
+         * 
+         * A coverage is a raster data set which originates from a coverage store.
+         *
+         * @uses the workspace specified during client instantiation
+         * @param string $coveragestore The coverage store from which retrieve the coverage
+         * @param string $name The coverage name to retrieve
+         * @return \OneOffTech\GeoServer\Models\Coverage 
+         * @static 
+         */ 
+        public static function coverage($coveragestore, $name = null)
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->coverage($coveragestore, $name);
+        }
+        
+        /**
+         * Delete a coverage store
+         *
+         * @uses the workspace specified during client instantiation
+         * @param string $name The coverage store name
+         * @return \OneOffTech\GeoServer\Models\CoverageStore 
+         * @throws \OneOffTech\GeoServer\Exception\StoreNotFoundException if the coverage store to remove do not exists
+         * @static 
+         */ 
+        public static function deleteCoveragestore($name)
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->deleteCoveragestore($name);
+        }
+        
+        /**
+         * Upload a file to the pertaining store
+         * 
+         * Vector data will be added to a data store
+         * Raster data will be added to a coverage store
+         *
+         * @param \ttungbmt\Laravel\Geoserver\GeoFile $file
+         * @return \OneOffTech\GeoServer\Models\Resource The resource that was uploaded. Can be a Coverage for raster data or Feature for vector data
+         * @static 
+         */ 
+        public static function upload($file)
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->upload($file);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function details($file)
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->details($file);
+        }
+        
+        /**
+         * Check if a specified GeoFile was uploaded to the Geoserver
+         * The check will attempt to find the store that matches the given name
+         *
+         * @param \ttungbmt\Laravel\Geoserver\GeoFile $file
+         * @return bool 
+         * @static 
+         */ 
+        public static function exist($file)
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->exist($file);
+        }
+        
+        /**
+         * Delete a GeoFile from the GeoServer instance
+         * 
+         * Deletes the corresponding store based on the GeoType format
+         *
+         * @param \ttungbmt\Laravel\Geoserver\GeoFile $data The GeoFile to delete
+         * @return bool 
+         * @throws \OneOffTech\GeoServer\Exception\StoreNotFoundException if the store, that corresponds to the file, do not exists
+         * @static 
+         */ 
+        public static function remove($data)
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->remove($data);
+        }
+        
+        /**
+         * Get the Web Map Service (WMS) map URL for the specified resource
+         *
+         * @param \ttungbmt\Laravel\Geoserver\GeoFile|Resource  data the data you want to obtain the WMS url for. If a GeoFile is passed, the corresponding resource is retrieved from the geoserver, if found
+         * @param \ttungbmt\Laravel\Geoserver\WmsOption $wmsOptions The options to configure the WMS output
+         * @static 
+         */ 
+        public static function wmsMapUrl($data, $wmsOptions = null)
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->wmsMapUrl($data, $wmsOptions);
+        }
+        
+        /**
+         * Attempt to retrieve a thumbnail of a previously uploaded
+         * GeoFile or Resource using the Web Map Service
+         *
+         * @param \ttungbmt\Laravel\Geoserver\GeoFile|Resource  data the data you want to obtain the WMS url for. If a GeoFile is passed, the corresponding resource is retrieved from the geoserver, if found
+         * @return resource A resource
+         * @static 
+         */ 
+        public static function thumbnail($data, $width = 300, $height = 300)
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->thumbnail($data, $width, $height);
+        }
+        
+        /**
+         * Get a style by its name.
+         * 
+         * The style must be in the current workspace
+         *
+         * @param string $name
+         * @return \OneOffTech\GeoServer\Models\Style 
+         * @throws StyleNotFoundException if the style with the given name cannot be found
+         * @throws ErrorResponseException for communication errors with the GeoServer
+         * @static 
+         */ 
+        public static function style($name)
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->style($name);
+        }
+        
+        /**
+         * Get all the styles defined in the current workspace
+         *
+         * @return \OneOffTech\GeoServer\Models\Style[] 
+         * @static 
+         */ 
+        public static function styles()
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->styles();
+        }
+        
+        /**
+         * Upload a SLD style to the workspace
+         *
+         * @param \ttungbmt\Laravel\Geoserver\StyleFile $file The style file
+         * @return \OneOffTech\GeoServer\Models\Style the uploaded style details
+         * @throws StyleAlreadyExistsException
+         * @static 
+         */ 
+        public static function uploadStyle($file)
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->uploadStyle($file);
+        }
+        
+        /**
+         * Remove a style from the workspace, given its name
+         *
+         * @param string $name the name of the style to remove. It must be in the workspace
+         * @return \OneOffTech\GeoServer\Models\Style 
+         * @throws StyleNotFoundException if the style with the given name cannot be found
+         * @throws ErrorResponseException for communication errors with the GeoServer
+         * @static 
+         */ 
+        public static function removeStyle($name)
+        {
+                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        return $instance->removeStyle($name);
+        }
+         
+    }
+ 
+}
+
 namespace Yajra\DataTables\Facades { 
 
     /**
@@ -21323,6 +21683,8 @@ namespace  {
     class Livewire extends \Livewire\Livewire {}
 
     class Excel extends \Maatwebsite\Excel\Facades\Excel {}
+
+    class Geoserver extends \ttungbmt\Laravel\Geoserver\Facade {}
 
     class DataTables extends \Yajra\DataTables\Facades\DataTables {}
  

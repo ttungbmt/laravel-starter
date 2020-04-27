@@ -1,22 +1,17 @@
 <?php
-
 namespace App\Http\Controllers;
 
+use Geoserver;
 
-use App\GeoFile;
-use App\GeoFileManager;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Lang;
-
-
-
-class HomeController extends Controller {
+class HomeController extends Controller
+{
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->middleware('auth');
     }
 
@@ -25,24 +20,19 @@ class HomeController extends Controller {
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index() {
-//        $node = GeoFileManager::create([
-//            'name' => '4',
-//            'children' => [
-//                [
-//                    'name' => '5',
-//                    'children' => [
-//                        [
-//                            'name' => '6'
-//                        ],
-//                    ],
-//                ],
-//            ],
-//        ]);
+    public function index()
+    {
+//        {"@key":"dbtype","$":"postgis"},
+//        {"@key":"host","$":"{{host}}"},
+//        {"@key":"port","$":"{{port}}"},
+//        {"@key":"database","$":"{{database}}"},
+//        {"@key":"user","$":"{{user}}"},
+//        {"@key":"passwd","$":"{{passwd}}"},
+//        {"@key":"Expose primary keys","$":true}
 
-//        $node = GeoFileManager::withDepth()->having('depth', '=', 1)->get()->toTree()->first();
-        $node = GeoFileManager::with(['file'])->descendantsAndSelf(1)->toTree()->toArray();
-        dd($node);
+        $geoserver = GeoServer::layer('hc_tinh');
+        dd($geoserver);
+
         return view('home');
     }
 

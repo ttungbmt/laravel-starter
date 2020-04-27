@@ -19,9 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/home', 'HomeController@index')->name('home');
+Route::redirect('admin', '/home');
 
 Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::resource('geo-file', 'GeoFileController');
+    Route::get('maps', 'MapController@index');
 });
 
 Auth::routes();

@@ -1,0 +1,3 @@
+[submodule "platform/packages/laravel-geoserver"]
+	path = platform/packages/laravel-geoserver
+	url = https://github.com/ttungbmt/laravel-geoserver.git
