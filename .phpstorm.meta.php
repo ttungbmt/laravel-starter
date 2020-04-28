@@ -5,7 +5,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2020-04-27 12:53:11.
+    * Generated on 2020-04-27 17:48:18.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -193,7 +193,7 @@ namespace PHPSTORM_META {
         'flare.http' => \Facade\FlareClient\Http\Client::class,
         'flare.logger' => \Monolog\Logger::class,
         'form' => \Collective\Html\FormBuilder::class,
-        'geoserver' => \ttungbmt\Laravel\Geoserver\Geoserver::class,
+        'geoserver' => \ttungbmt\REST\Geoserver\Geoserver::class,
         'gravatar' => \Creativeorange\Gravatar\Gravatar::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
@@ -408,7 +408,7 @@ namespace PHPSTORM_META {
         'flare.http' => \Facade\FlareClient\Http\Client::class,
         'flare.logger' => \Monolog\Logger::class,
         'form' => \Collective\Html\FormBuilder::class,
-        'geoserver' => \ttungbmt\Laravel\Geoserver\Geoserver::class,
+        'geoserver' => \ttungbmt\REST\Geoserver\Geoserver::class,
         'gravatar' => \Creativeorange\Gravatar\Gravatar::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
@@ -623,7 +623,7 @@ namespace PHPSTORM_META {
         'flare.http' => \Facade\FlareClient\Http\Client::class,
         'flare.logger' => \Monolog\Logger::class,
         'form' => \Collective\Html\FormBuilder::class,
-        'geoserver' => \ttungbmt\Laravel\Geoserver\Geoserver::class,
+        'geoserver' => \ttungbmt\REST\Geoserver\Geoserver::class,
         'gravatar' => \Creativeorange\Gravatar\Gravatar::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
@@ -838,7 +838,7 @@ namespace PHPSTORM_META {
         'flare.http' => \Facade\FlareClient\Http\Client::class,
         'flare.logger' => \Monolog\Logger::class,
         'form' => \Collective\Html\FormBuilder::class,
-        'geoserver' => \ttungbmt\Laravel\Geoserver\Geoserver::class,
+        'geoserver' => \ttungbmt\REST\Geoserver\Geoserver::class,
         'gravatar' => \Creativeorange\Gravatar\Gravatar::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
@@ -1053,7 +1053,7 @@ namespace PHPSTORM_META {
         'flare.http' => \Facade\FlareClient\Http\Client::class,
         'flare.logger' => \Monolog\Logger::class,
         'form' => \Collective\Html\FormBuilder::class,
-        'geoserver' => \ttungbmt\Laravel\Geoserver\Geoserver::class,
+        'geoserver' => \ttungbmt\REST\Geoserver\Geoserver::class,
         'gravatar' => \Creativeorange\Gravatar\Gravatar::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
@@ -1268,7 +1268,7 @@ namespace PHPSTORM_META {
         'flare.http' => \Facade\FlareClient\Http\Client::class,
         'flare.logger' => \Monolog\Logger::class,
         'form' => \Collective\Html\FormBuilder::class,
-        'geoserver' => \ttungbmt\Laravel\Geoserver\Geoserver::class,
+        'geoserver' => \ttungbmt\REST\Geoserver\Geoserver::class,
         'gravatar' => \Creativeorange\Gravatar\Gravatar::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
@@ -1483,7 +1483,7 @@ namespace PHPSTORM_META {
         'flare.http' => \Facade\FlareClient\Http\Client::class,
         'flare.logger' => \Monolog\Logger::class,
         'form' => \Collective\Html\FormBuilder::class,
-        'geoserver' => \ttungbmt\Laravel\Geoserver\Geoserver::class,
+        'geoserver' => \ttungbmt\REST\Geoserver\Geoserver::class,
         'gravatar' => \Creativeorange\Gravatar\Gravatar::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
@@ -1698,7 +1698,7 @@ namespace PHPSTORM_META {
         'flare.http' => \Facade\FlareClient\Http\Client::class,
         'flare.logger' => \Monolog\Logger::class,
         'form' => \Collective\Html\FormBuilder::class,
-        'geoserver' => \ttungbmt\Laravel\Geoserver\Geoserver::class,
+        'geoserver' => \ttungbmt\REST\Geoserver\Geoserver::class,
         'gravatar' => \Creativeorange\Gravatar\Gravatar::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
         'hash.driver' => \Illuminate\Hashing\BcryptHasher::class,
