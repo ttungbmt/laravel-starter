@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 7.8.1 on 2020-04-27 13:56:37.
+ * Generated for Laravel 7.8.1 on 2020-04-27 17:48:17.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -18195,7 +18195,7 @@ namespace Maatwebsite\Excel\Facades {
  
 }
 
-namespace ttungbmt\Laravel\Geoserver { 
+namespace ttungbmt\REST\Geoserver { 
 
     /**
      * 
@@ -18210,8 +18210,33 @@ namespace ttungbmt\Laravel\Geoserver {
          */ 
         public static function workspaces()
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->workspaces();
+        }
+        
+        /**
+         * Retrieve the workspace information.
+         *
+         * @param string $name
+         * @return \OneOffTech\GeoServer\Models\Workspace 
+         * @uses the workspace specified during client instantiation
+         * @static 
+         */ 
+        public static function workspace($name = '')
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->workspace($name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getWorkspaceName($name = '')
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->getWorkspaceName($name);
         }
         
         /**
@@ -18225,8 +18250,107 @@ namespace ttungbmt\Laravel\Geoserver {
          */ 
         public static function createWorkspace($name = '')
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->createWorkspace($name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function updateWorkspace($data, $name = '')
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->updateWorkspace($data, $name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function deleteWorkspace($name = '')
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->deleteWorkspace($name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function createDatastore($data)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->createDatastore($data);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function updateDatastore($name, $data)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->updateDatastore($name, $data);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function layers()
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->layers();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function layer($name)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->layer($name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function createLayer($datastore, $name)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->createLayer($datastore, $name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function updateLayer($name, $data)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->updateLayer($name, $data);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function deleteLayer($name)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->deleteLayer($name);
         }
         
         /**
@@ -18234,13 +18358,13 @@ namespace ttungbmt\Laravel\Geoserver {
          *
          * @param string $url The GeoServer instance URL
          * @param string $workspace The GeoServer workspace to use
-         * @param \ttungbmt\Laravel\Geoserver\Authentication $authentication The authentication credentials, if necessary
+         * @param \ttungbmt\REST\Geoserver\Authentication $authentication The authentication credentials, if necessary
          * @return \GeoServer 
          * @static 
          */ 
         public static function build($url, $workspace, $authentication = null)
         {
-                        return \ttungbmt\Laravel\Geoserver\Geoserver::build($url, $workspace, $authentication);
+                        return \ttungbmt\REST\Geoserver\Geoserver::build($url, $workspace, $authentication);
         }
         
         /**
@@ -18251,7 +18375,7 @@ namespace ttungbmt\Laravel\Geoserver {
          */ 
         public static function version()
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->version();
         }
         
@@ -18262,21 +18386,8 @@ namespace ttungbmt\Laravel\Geoserver {
          */ 
         public static function manifest()
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->manifest();
-        }
-        
-        /**
-         * Retrieve the workspace information.
-         *
-         * @uses the workspace specified during client instantiation
-         * @return \OneOffTech\GeoServer\Models\Workspace 
-         * @static 
-         */ 
-        public static function workspace()
-        {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
-                        return $instance->workspace();
         }
         
         /**
@@ -18290,7 +18401,7 @@ namespace ttungbmt\Laravel\Geoserver {
          */ 
         public static function datastores()
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->datastores();
         }
         
@@ -18308,7 +18419,7 @@ namespace ttungbmt\Laravel\Geoserver {
          */ 
         public static function datastore($name)
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->datastore($name);
         }
         
@@ -18324,7 +18435,7 @@ namespace ttungbmt\Laravel\Geoserver {
          */ 
         public static function deleteDatastore($name)
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->deleteDatastore($name);
         }
         
@@ -18342,7 +18453,7 @@ namespace ttungbmt\Laravel\Geoserver {
          */ 
         public static function feature($datastore, $name = null)
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->feature($datastore, $name);
         }
         
@@ -18357,7 +18468,7 @@ namespace ttungbmt\Laravel\Geoserver {
          */ 
         public static function coveragestores()
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->coveragestores();
         }
         
@@ -18373,7 +18484,7 @@ namespace ttungbmt\Laravel\Geoserver {
          */ 
         public static function coveragestore($name)
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->coveragestore($name);
         }
         
@@ -18390,7 +18501,7 @@ namespace ttungbmt\Laravel\Geoserver {
          */ 
         public static function coverage($coveragestore, $name = null)
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->coverage($coveragestore, $name);
         }
         
@@ -18405,7 +18516,7 @@ namespace ttungbmt\Laravel\Geoserver {
          */ 
         public static function deleteCoveragestore($name)
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->deleteCoveragestore($name);
         }
         
@@ -18415,13 +18526,13 @@ namespace ttungbmt\Laravel\Geoserver {
          * Vector data will be added to a data store
          * Raster data will be added to a coverage store
          *
-         * @param \ttungbmt\Laravel\Geoserver\GeoFile $file
+         * @param \ttungbmt\REST\Geoserver\GeoFile $file
          * @return \OneOffTech\GeoServer\Models\Resource The resource that was uploaded. Can be a Coverage for raster data or Feature for vector data
          * @static 
          */ 
         public static function upload($file)
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->upload($file);
         }
         
@@ -18432,7 +18543,7 @@ namespace ttungbmt\Laravel\Geoserver {
          */ 
         public static function details($file)
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->details($file);
         }
         
@@ -18440,13 +18551,13 @@ namespace ttungbmt\Laravel\Geoserver {
          * Check if a specified GeoFile was uploaded to the Geoserver
          * The check will attempt to find the store that matches the given name
          *
-         * @param \ttungbmt\Laravel\Geoserver\GeoFile $file
+         * @param \ttungbmt\REST\Geoserver\GeoFile $file
          * @return bool 
          * @static 
          */ 
         public static function exist($file)
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->exist($file);
         }
         
@@ -18455,27 +18566,27 @@ namespace ttungbmt\Laravel\Geoserver {
          * 
          * Deletes the corresponding store based on the GeoType format
          *
-         * @param \ttungbmt\Laravel\Geoserver\GeoFile $data The GeoFile to delete
+         * @param \ttungbmt\REST\Geoserver\GeoFile $data The GeoFile to delete
          * @return bool 
          * @throws \OneOffTech\GeoServer\Exception\StoreNotFoundException if the store, that corresponds to the file, do not exists
          * @static 
          */ 
         public static function remove($data)
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->remove($data);
         }
         
         /**
          * Get the Web Map Service (WMS) map URL for the specified resource
          *
-         * @param \ttungbmt\Laravel\Geoserver\GeoFile|Resource  data the data you want to obtain the WMS url for. If a GeoFile is passed, the corresponding resource is retrieved from the geoserver, if found
-         * @param \ttungbmt\Laravel\Geoserver\WmsOption $wmsOptions The options to configure the WMS output
+         * @param \ttungbmt\REST\Geoserver\GeoFile|Resource  data the data you want to obtain the WMS url for. If a GeoFile is passed, the corresponding resource is retrieved from the geoserver, if found
+         * @param \ttungbmt\REST\Geoserver\WmsOption $wmsOptions The options to configure the WMS output
          * @static 
          */ 
         public static function wmsMapUrl($data, $wmsOptions = null)
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->wmsMapUrl($data, $wmsOptions);
         }
         
@@ -18483,13 +18594,13 @@ namespace ttungbmt\Laravel\Geoserver {
          * Attempt to retrieve a thumbnail of a previously uploaded
          * GeoFile or Resource using the Web Map Service
          *
-         * @param \ttungbmt\Laravel\Geoserver\GeoFile|Resource  data the data you want to obtain the WMS url for. If a GeoFile is passed, the corresponding resource is retrieved from the geoserver, if found
+         * @param \ttungbmt\REST\Geoserver\GeoFile|Resource  data the data you want to obtain the WMS url for. If a GeoFile is passed, the corresponding resource is retrieved from the geoserver, if found
          * @return resource A resource
          * @static 
          */ 
         public static function thumbnail($data, $width = 300, $height = 300)
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->thumbnail($data, $width, $height);
         }
         
@@ -18506,7 +18617,7 @@ namespace ttungbmt\Laravel\Geoserver {
          */ 
         public static function style($name)
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->style($name);
         }
         
@@ -18518,21 +18629,21 @@ namespace ttungbmt\Laravel\Geoserver {
          */ 
         public static function styles()
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->styles();
         }
         
         /**
          * Upload a SLD style to the workspace
          *
-         * @param \ttungbmt\Laravel\Geoserver\StyleFile $file The style file
+         * @param \ttungbmt\REST\Geoserver\StyleFile $file The style file
          * @return \OneOffTech\GeoServer\Models\Style the uploaded style details
          * @throws StyleAlreadyExistsException
          * @static 
          */ 
         public static function uploadStyle($file)
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->uploadStyle($file);
         }
         
@@ -18547,7 +18658,7 @@ namespace ttungbmt\Laravel\Geoserver {
          */ 
         public static function removeStyle($name)
         {
-                        /** @var \ttungbmt\Laravel\Geoserver\Geoserver $instance */
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
                         return $instance->removeStyle($name);
         }
          
@@ -21684,7 +21795,7 @@ namespace  {
 
     class Excel extends \Maatwebsite\Excel\Facades\Excel {}
 
-    class Geoserver extends \ttungbmt\Laravel\Geoserver\Facade {}
+    class Geoserver extends \ttungbmt\REST\Geoserver\Facade {}
 
     class DataTables extends \Yajra\DataTables\Facades\DataTables {}
  

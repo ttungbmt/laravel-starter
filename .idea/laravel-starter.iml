@@ -15,6 +15,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/brick/money" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/cakephp/chronos" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/cebe/markdown" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/charlielangridge/nova-compile-assets" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/christophrumpel/nova-notifications" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/clue/stream-filter" />
@@ -43,6 +44,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/eminiarts/nova-permissions" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/eminiarts/nova-tabs" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/epartment/nova-dependency-container" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ezyang/htmlpurifier" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/facade/flare-client-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/facade/ignition" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/facade/ignition-contracts" />
@@ -188,6 +190,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/version" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/seld/jsonlint" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/seld/phar-utils" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sergeymakinen/yii2-facades" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sidis405/nova-installed-packages" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sixlive/nova-text-copy-field" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/db-dumper" />
@@ -235,9 +238,9 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/timothyasp/nova-color-field" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/ttungbmt/laravel-geoserver" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/ttungbmt/livewire-form" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/ttungbmt/livewire-table" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ttungbmt/geoserver-rest-api" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ttungbmt/nova" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ttungbmt/nova-settings" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vink/nova-cache-card" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/voku/portable-ascii" />
@@ -251,6 +254,10 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/yajra/laravel-datatables-fractal" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/yajra/laravel-datatables-html" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/yajra/laravel-datatables-oracle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/jquery" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/jquery-pjax" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2-composer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
