@@ -1,3 +1,4 @@
+import Vue from 'vue'
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -15,6 +16,10 @@ require('./bootstrap');
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+
+import datepicker from './components/datepicker/index.vue'
+
+Vue.component(datepicker.name, datepicker)
 
 import Form from 'form-backend-validation';
 
@@ -36,10 +41,10 @@ const app = new Vue({
     },
     methods: {
         submitForm(){
-            form.post('/home')
-                .then(response => {
-                    console.log(response)
-                })
+            // form.post('/home')
+            //     .then(response => {
+            //         console.log(response)
+            //     })
         }
     }
 });

@@ -3,8 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Kalnoy\Nestedset\NodeTrait;
 
 class GeoFile extends Model
 {
-    public $fillable = ['title', 'code'];
+    use NodeTrait;
+    public $fillable = ['name', 'code'];
+
+
 }

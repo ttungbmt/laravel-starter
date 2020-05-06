@@ -2,6 +2,25 @@
 
 use Illuminate\Support\Arr;
 
+if (! function_exists('configure')) {
+    /**
+     * Configures an object with the initial property values.
+     * @param object $object the object to be configured
+     * @param array $properties the property initial values given in terms of name-value pairs.
+     * @return object the object itself
+     */
+    function configure($object, $properties)
+    {
+        foreach ($properties as $name => $value) {
+            $object->$name = $value;
+        }
+
+        return $object;
+    }
+}
+
+
+
 if (! function_exists('array_get')) {
     /**
      * Get an item from an array using "dot" notation.

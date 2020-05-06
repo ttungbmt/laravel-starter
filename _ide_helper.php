@@ -2,8 +2,8 @@
 // @formatter:off
 
 /**
- * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 7.6.2 on 2020-04-20 02:27:06.
+ * A helper file for Laravel, to provide autocomplete information to your IDE
+ * Generated for Laravel 7.8.1 on 2020-04-27 17:48:17.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -2881,6 +2881,17 @@ namespace Illuminate\Support\Facades {
     class Bus {
         
         /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function dispatchNow($command, $handler = null)
+        {
+                        /** @var \Lorisleiva\Actions\BusDispatcher $instance */
+                        return $instance->dispatchNow($command, $handler);
+        }
+        
+        /**
          * Dispatch a command to its appropriate handler.
          *
          * @param mixed $command
@@ -2889,22 +2900,9 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function dispatch($command)
         {
-                        /** @var \Illuminate\Bus\Dispatcher $instance */
+            //Method inherited from \Illuminate\Bus\Dispatcher            
+                        /** @var \Lorisleiva\Actions\BusDispatcher $instance */
                         return $instance->dispatch($command);
-        }
-        
-        /**
-         * Dispatch a command to its appropriate handler in the current process.
-         *
-         * @param mixed $command
-         * @param mixed $handler
-         * @return mixed 
-         * @static 
-         */ 
-        public static function dispatchNow($command, $handler = null)
-        {
-                        /** @var \Illuminate\Bus\Dispatcher $instance */
-                        return $instance->dispatchNow($command, $handler);
         }
         
         /**
@@ -2916,7 +2914,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function hasCommandHandler($command)
         {
-                        /** @var \Illuminate\Bus\Dispatcher $instance */
+            //Method inherited from \Illuminate\Bus\Dispatcher            
+                        /** @var \Lorisleiva\Actions\BusDispatcher $instance */
                         return $instance->hasCommandHandler($command);
         }
         
@@ -2929,7 +2928,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getCommandHandler($command)
         {
-                        /** @var \Illuminate\Bus\Dispatcher $instance */
+            //Method inherited from \Illuminate\Bus\Dispatcher            
+                        /** @var \Lorisleiva\Actions\BusDispatcher $instance */
                         return $instance->getCommandHandler($command);
         }
         
@@ -2942,7 +2942,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function dispatchToQueue($command)
         {
-                        /** @var \Illuminate\Bus\Dispatcher $instance */
+            //Method inherited from \Illuminate\Bus\Dispatcher            
+                        /** @var \Lorisleiva\Actions\BusDispatcher $instance */
                         return $instance->dispatchToQueue($command);
         }
         
@@ -2956,7 +2957,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function dispatchAfterResponse($command, $handler = null)
         {
-                        /** @var \Illuminate\Bus\Dispatcher $instance */
+            //Method inherited from \Illuminate\Bus\Dispatcher            
+                        /** @var \Lorisleiva\Actions\BusDispatcher $instance */
                         $instance->dispatchAfterResponse($command, $handler);
         }
         
@@ -2964,12 +2966,13 @@ namespace Illuminate\Support\Facades {
          * Set the pipes through which commands should be piped before dispatching.
          *
          * @param array $pipes
-         * @return \Illuminate\Bus\Dispatcher 
+         * @return \Lorisleiva\Actions\BusDispatcher 
          * @static 
          */ 
         public static function pipeThrough($pipes)
         {
-                        /** @var \Illuminate\Bus\Dispatcher $instance */
+            //Method inherited from \Illuminate\Bus\Dispatcher            
+                        /** @var \Lorisleiva\Actions\BusDispatcher $instance */
                         return $instance->pipeThrough($pipes);
         }
         
@@ -2977,12 +2980,13 @@ namespace Illuminate\Support\Facades {
          * Map a command to a handler.
          *
          * @param array $map
-         * @return \Illuminate\Bus\Dispatcher 
+         * @return \Lorisleiva\Actions\BusDispatcher 
          * @static 
          */ 
         public static function map($map)
         {
-                        /** @var \Illuminate\Bus\Dispatcher $instance */
+            //Method inherited from \Illuminate\Bus\Dispatcher            
+                        /** @var \Lorisleiva\Actions\BusDispatcher $instance */
                         return $instance->map($map);
         }
         
@@ -4378,14 +4382,28 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
+         * Bind values to their parameters in the given statement.
+         *
+         * @param \PDOStatement $statement
+         * @param array $bindings
+         * @return void 
+         * @static 
+         */ 
+        public static function bindValues($statement, $bindings)
+        {
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
+                        $instance->bindValues($statement, $bindings);
+        }
+        
+        /**
          * Get a schema builder instance for the connection.
          *
-         * @return \Illuminate\Database\Schema\MySqlBuilder 
+         * @return \Illuminate\Database\Schema\PostgresBuilder 
          * @static 
          */ 
         public static function getSchemaBuilder()
         {
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getSchemaBuilder();
         }
         
@@ -4398,7 +4416,7 @@ namespace Illuminate\Support\Facades {
         public static function useDefaultQueryGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         $instance->useDefaultQueryGrammar();
         }
         
@@ -4411,7 +4429,7 @@ namespace Illuminate\Support\Facades {
         public static function useDefaultSchemaGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         $instance->useDefaultSchemaGrammar();
         }
         
@@ -4424,7 +4442,7 @@ namespace Illuminate\Support\Facades {
         public static function useDefaultPostProcessor()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         $instance->useDefaultPostProcessor();
         }
         
@@ -4439,7 +4457,7 @@ namespace Illuminate\Support\Facades {
         public static function table($table, $as = null)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->table($table, $as);
         }
         
@@ -4452,7 +4470,7 @@ namespace Illuminate\Support\Facades {
         public static function query()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->query();
         }
         
@@ -4468,7 +4486,7 @@ namespace Illuminate\Support\Facades {
         public static function selectOne($query, $bindings = [], $useReadPdo = true)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->selectOne($query, $bindings, $useReadPdo);
         }
         
@@ -4483,7 +4501,7 @@ namespace Illuminate\Support\Facades {
         public static function selectFromWriteConnection($query, $bindings = [])
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->selectFromWriteConnection($query, $bindings);
         }
         
@@ -4499,7 +4517,7 @@ namespace Illuminate\Support\Facades {
         public static function select($query, $bindings = [], $useReadPdo = true)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->select($query, $bindings, $useReadPdo);
         }
         
@@ -4515,7 +4533,7 @@ namespace Illuminate\Support\Facades {
         public static function cursor($query, $bindings = [], $useReadPdo = true)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->cursor($query, $bindings, $useReadPdo);
         }
         
@@ -4530,7 +4548,7 @@ namespace Illuminate\Support\Facades {
         public static function insert($query, $bindings = [])
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->insert($query, $bindings);
         }
         
@@ -4545,7 +4563,7 @@ namespace Illuminate\Support\Facades {
         public static function update($query, $bindings = [])
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->update($query, $bindings);
         }
         
@@ -4560,7 +4578,7 @@ namespace Illuminate\Support\Facades {
         public static function delete($query, $bindings = [])
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->delete($query, $bindings);
         }
         
@@ -4575,7 +4593,7 @@ namespace Illuminate\Support\Facades {
         public static function statement($query, $bindings = [])
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->statement($query, $bindings);
         }
         
@@ -4590,7 +4608,7 @@ namespace Illuminate\Support\Facades {
         public static function affectingStatement($query, $bindings = [])
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->affectingStatement($query, $bindings);
         }
         
@@ -4604,7 +4622,7 @@ namespace Illuminate\Support\Facades {
         public static function unprepared($query)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->unprepared($query);
         }
         
@@ -4618,23 +4636,8 @@ namespace Illuminate\Support\Facades {
         public static function pretend($callback)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->pretend($callback);
-        }
-        
-        /**
-         * Bind values to their parameters in the given statement.
-         *
-         * @param \PDOStatement $statement
-         * @param array $bindings
-         * @return void 
-         * @static 
-         */ 
-        public static function bindValues($statement, $bindings)
-        {
-            //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
-                        $instance->bindValues($statement, $bindings);
         }
         
         /**
@@ -4647,7 +4650,7 @@ namespace Illuminate\Support\Facades {
         public static function prepareBindings($bindings)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->prepareBindings($bindings);
         }
         
@@ -4663,7 +4666,7 @@ namespace Illuminate\Support\Facades {
         public static function logQuery($query, $bindings, $time = null)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         $instance->logQuery($query, $bindings, $time);
         }
         
@@ -4677,7 +4680,7 @@ namespace Illuminate\Support\Facades {
         public static function listen($callback)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         $instance->listen($callback);
         }
         
@@ -4691,7 +4694,7 @@ namespace Illuminate\Support\Facades {
         public static function raw($value)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->raw($value);
         }
         
@@ -4705,7 +4708,7 @@ namespace Illuminate\Support\Facades {
         public static function recordsHaveBeenModified($value = true)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         $instance->recordsHaveBeenModified($value);
         }
         
@@ -4718,7 +4721,7 @@ namespace Illuminate\Support\Facades {
         public static function isDoctrineAvailable()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->isDoctrineAvailable();
         }
         
@@ -4733,7 +4736,7 @@ namespace Illuminate\Support\Facades {
         public static function getDoctrineColumn($table, $column)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getDoctrineColumn($table, $column);
         }
         
@@ -4746,7 +4749,7 @@ namespace Illuminate\Support\Facades {
         public static function getDoctrineSchemaManager()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getDoctrineSchemaManager();
         }
         
@@ -4759,7 +4762,7 @@ namespace Illuminate\Support\Facades {
         public static function getDoctrineConnection()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getDoctrineConnection();
         }
         
@@ -4772,7 +4775,7 @@ namespace Illuminate\Support\Facades {
         public static function getPdo()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getPdo();
         }
         
@@ -4785,7 +4788,7 @@ namespace Illuminate\Support\Facades {
         public static function getRawPdo()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getRawPdo();
         }
         
@@ -4798,7 +4801,7 @@ namespace Illuminate\Support\Facades {
         public static function getReadPdo()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getReadPdo();
         }
         
@@ -4811,7 +4814,7 @@ namespace Illuminate\Support\Facades {
         public static function getRawReadPdo()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getRawReadPdo();
         }
         
@@ -4819,13 +4822,13 @@ namespace Illuminate\Support\Facades {
          * Set the PDO connection.
          *
          * @param \PDO|\Closure|null $pdo
-         * @return \Illuminate\Database\MySqlConnection 
+         * @return \Illuminate\Database\PostgresConnection 
          * @static 
          */ 
         public static function setPdo($pdo)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->setPdo($pdo);
         }
         
@@ -4833,13 +4836,13 @@ namespace Illuminate\Support\Facades {
          * Set the PDO connection used for reading.
          *
          * @param \PDO|\Closure|null $pdo
-         * @return \Illuminate\Database\MySqlConnection 
+         * @return \Illuminate\Database\PostgresConnection 
          * @static 
          */ 
         public static function setReadPdo($pdo)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->setReadPdo($pdo);
         }
         
@@ -4852,7 +4855,7 @@ namespace Illuminate\Support\Facades {
         public static function getName()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getName();
         }
         
@@ -4866,7 +4869,7 @@ namespace Illuminate\Support\Facades {
         public static function getConfig($option = null)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getConfig($option);
         }
         
@@ -4879,7 +4882,7 @@ namespace Illuminate\Support\Facades {
         public static function getDriverName()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getDriverName();
         }
         
@@ -4892,7 +4895,7 @@ namespace Illuminate\Support\Facades {
         public static function getQueryGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getQueryGrammar();
         }
         
@@ -4900,13 +4903,13 @@ namespace Illuminate\Support\Facades {
          * Set the query grammar used by the connection.
          *
          * @param \Illuminate\Database\Query\Grammars\Grammar $grammar
-         * @return \Illuminate\Database\MySqlConnection 
+         * @return \Illuminate\Database\PostgresConnection 
          * @static 
          */ 
         public static function setQueryGrammar($grammar)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->setQueryGrammar($grammar);
         }
         
@@ -4919,7 +4922,7 @@ namespace Illuminate\Support\Facades {
         public static function getSchemaGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getSchemaGrammar();
         }
         
@@ -4927,13 +4930,13 @@ namespace Illuminate\Support\Facades {
          * Set the schema grammar used by the connection.
          *
          * @param \Illuminate\Database\Schema\Grammars\Grammar $grammar
-         * @return \Illuminate\Database\MySqlConnection 
+         * @return \Illuminate\Database\PostgresConnection 
          * @static 
          */ 
         public static function setSchemaGrammar($grammar)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->setSchemaGrammar($grammar);
         }
         
@@ -4946,7 +4949,7 @@ namespace Illuminate\Support\Facades {
         public static function getPostProcessor()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getPostProcessor();
         }
         
@@ -4954,13 +4957,13 @@ namespace Illuminate\Support\Facades {
          * Set the query post processor used by the connection.
          *
          * @param \Illuminate\Database\Query\Processors\Processor $processor
-         * @return \Illuminate\Database\MySqlConnection 
+         * @return \Illuminate\Database\PostgresConnection 
          * @static 
          */ 
         public static function setPostProcessor($processor)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->setPostProcessor($processor);
         }
         
@@ -4973,7 +4976,7 @@ namespace Illuminate\Support\Facades {
         public static function getEventDispatcher()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getEventDispatcher();
         }
         
@@ -4981,13 +4984,13 @@ namespace Illuminate\Support\Facades {
          * Set the event dispatcher instance on the connection.
          *
          * @param \Illuminate\Contracts\Events\Dispatcher $events
-         * @return \Illuminate\Database\MySqlConnection 
+         * @return \Illuminate\Database\PostgresConnection 
          * @static 
          */ 
         public static function setEventDispatcher($events)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->setEventDispatcher($events);
         }
         
@@ -5000,7 +5003,7 @@ namespace Illuminate\Support\Facades {
         public static function unsetEventDispatcher()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         $instance->unsetEventDispatcher();
         }
         
@@ -5013,7 +5016,7 @@ namespace Illuminate\Support\Facades {
         public static function pretending()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->pretending();
         }
         
@@ -5026,7 +5029,7 @@ namespace Illuminate\Support\Facades {
         public static function getQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getQueryLog();
         }
         
@@ -5039,7 +5042,7 @@ namespace Illuminate\Support\Facades {
         public static function flushQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         $instance->flushQueryLog();
         }
         
@@ -5052,7 +5055,7 @@ namespace Illuminate\Support\Facades {
         public static function enableQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         $instance->enableQueryLog();
         }
         
@@ -5065,7 +5068,7 @@ namespace Illuminate\Support\Facades {
         public static function disableQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         $instance->disableQueryLog();
         }
         
@@ -5078,7 +5081,7 @@ namespace Illuminate\Support\Facades {
         public static function logging()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->logging();
         }
         
@@ -5091,7 +5094,7 @@ namespace Illuminate\Support\Facades {
         public static function getDatabaseName()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getDatabaseName();
         }
         
@@ -5099,13 +5102,13 @@ namespace Illuminate\Support\Facades {
          * Set the name of the connected database.
          *
          * @param string $database
-         * @return \Illuminate\Database\MySqlConnection 
+         * @return \Illuminate\Database\PostgresConnection 
          * @static 
          */ 
         public static function setDatabaseName($database)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->setDatabaseName($database);
         }
         
@@ -5118,7 +5121,7 @@ namespace Illuminate\Support\Facades {
         public static function getTablePrefix()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->getTablePrefix();
         }
         
@@ -5126,13 +5129,13 @@ namespace Illuminate\Support\Facades {
          * Set the table prefix in use by the connection.
          *
          * @param string $prefix
-         * @return \Illuminate\Database\MySqlConnection 
+         * @return \Illuminate\Database\PostgresConnection 
          * @static 
          */ 
         public static function setTablePrefix($prefix)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->setTablePrefix($prefix);
         }
         
@@ -5146,7 +5149,7 @@ namespace Illuminate\Support\Facades {
         public static function withTablePrefix($grammar)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->withTablePrefix($grammar);
         }
         
@@ -5161,7 +5164,7 @@ namespace Illuminate\Support\Facades {
         public static function resolverFor($driver, $callback)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        \Illuminate\Database\MySqlConnection::resolverFor($driver, $callback);
+                        \Illuminate\Database\PostgresConnection::resolverFor($driver, $callback);
         }
         
         /**
@@ -5174,7 +5177,7 @@ namespace Illuminate\Support\Facades {
         public static function getResolver($driver)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        return \Illuminate\Database\MySqlConnection::getResolver($driver);
+                        return \Illuminate\Database\PostgresConnection::getResolver($driver);
         }
         
         /**
@@ -5189,7 +5192,7 @@ namespace Illuminate\Support\Facades {
         public static function transaction($callback, $attempts = 1)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->transaction($callback, $attempts);
         }
         
@@ -5203,7 +5206,7 @@ namespace Illuminate\Support\Facades {
         public static function beginTransaction()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         $instance->beginTransaction();
         }
         
@@ -5217,7 +5220,7 @@ namespace Illuminate\Support\Facades {
         public static function commit()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         $instance->commit();
         }
         
@@ -5232,7 +5235,7 @@ namespace Illuminate\Support\Facades {
         public static function rollBack($toLevel = null)
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         $instance->rollBack($toLevel);
         }
         
@@ -5245,7 +5248,7 @@ namespace Illuminate\Support\Facades {
         public static function transactionLevel()
         {
             //Method inherited from \Illuminate\Database\Connection            
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        /** @var \Illuminate\Database\PostgresConnection $instance */
                         return $instance->transactionLevel();
         }
          
@@ -5254,235 +5257,122 @@ namespace Illuminate\Support\Facades {
     /**
      * 
      *
+     * @method static array getListeners(string $eventName)
+     * @method static \Closure makeListener(\Closure|string $listener, bool $wildcard = false)
+     * @method static \Closure createClassListener(string $listener, bool $wildcard = false)
+     * @method static \Illuminate\Events\Dispatcher setQueueResolver(callable $resolver)
      * @see \Illuminate\Events\Dispatcher
      */ 
     class Event {
         
         /**
-         * Register an event listener with the dispatcher.
+         * 
          *
-         * @param string|array $events
-         * @param \Closure|string $listener
-         * @return void 
          * @static 
          */ 
         public static function listen($events, $listener)
         {
-                        /** @var \Illuminate\Events\Dispatcher $instance */
-                        $instance->listen($events, $listener);
+                        /** @var \Lorisleiva\Actions\EventDispatcherDecorator $instance */
+                        return $instance->listen($events, $listener);
         }
         
         /**
-         * Determine if a given event has listeners.
+         * 
          *
-         * @param string $eventName
-         * @return bool 
+         * @static 
+         */ 
+        public static function isActionFullyQualifiedName($listener)
+        {
+                        /** @var \Lorisleiva\Actions\EventDispatcherDecorator $instance */
+                        return $instance->isActionFullyQualifiedName($listener);
+        }
+        
+        /**
+         * 
+         *
          * @static 
          */ 
         public static function hasListeners($eventName)
         {
-                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        /** @var \Lorisleiva\Actions\EventDispatcherDecorator $instance */
                         return $instance->hasListeners($eventName);
         }
         
         /**
-         * Determine if the given event has any wildcard listeners.
+         * 
          *
-         * @param string $eventName
-         * @return bool 
-         * @static 
-         */ 
-        public static function hasWildcardListeners($eventName)
-        {
-                        /** @var \Illuminate\Events\Dispatcher $instance */
-                        return $instance->hasWildcardListeners($eventName);
-        }
-        
-        /**
-         * Register an event and payload to be fired later.
-         *
-         * @param string $event
-         * @param array $payload
-         * @return void 
-         * @static 
-         */ 
-        public static function push($event, $payload = [])
-        {
-                        /** @var \Illuminate\Events\Dispatcher $instance */
-                        $instance->push($event, $payload);
-        }
-        
-        /**
-         * Flush a set of pushed events.
-         *
-         * @param string $event
-         * @return void 
-         * @static 
-         */ 
-        public static function flush($event)
-        {
-                        /** @var \Illuminate\Events\Dispatcher $instance */
-                        $instance->flush($event);
-        }
-        
-        /**
-         * Register an event subscriber with the dispatcher.
-         *
-         * @param object|string $subscriber
-         * @return void 
          * @static 
          */ 
         public static function subscribe($subscriber)
         {
-                        /** @var \Illuminate\Events\Dispatcher $instance */
-                        $instance->subscribe($subscriber);
+                        /** @var \Lorisleiva\Actions\EventDispatcherDecorator $instance */
+                        return $instance->subscribe($subscriber);
         }
         
         /**
-         * Fire an event until the first non-null response is returned.
+         * 
          *
-         * @param string|object $event
-         * @param mixed $payload
-         * @return array|null 
          * @static 
          */ 
         public static function until($event, $payload = [])
         {
-                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        /** @var \Lorisleiva\Actions\EventDispatcherDecorator $instance */
                         return $instance->until($event, $payload);
         }
         
         /**
-         * Fire an event and call the listeners.
+         * 
          *
-         * @param string|object $event
-         * @param mixed $payload
-         * @param bool $halt
-         * @return array|null 
          * @static 
          */ 
         public static function dispatch($event, $payload = [], $halt = false)
         {
-                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        /** @var \Lorisleiva\Actions\EventDispatcherDecorator $instance */
                         return $instance->dispatch($event, $payload, $halt);
         }
         
         /**
-         * Get all of the listeners for a given event name.
+         * 
          *
-         * @param string $eventName
-         * @return array 
          * @static 
          */ 
-        public static function getListeners($eventName)
+        public static function push($event, $payload = [])
         {
-                        /** @var \Illuminate\Events\Dispatcher $instance */
-                        return $instance->getListeners($eventName);
+                        /** @var \Lorisleiva\Actions\EventDispatcherDecorator $instance */
+                        return $instance->push($event, $payload);
         }
         
         /**
-         * Register an event listener with the dispatcher.
+         * 
          *
-         * @param \Closure|string $listener
-         * @param bool $wildcard
-         * @return \Closure 
          * @static 
          */ 
-        public static function makeListener($listener, $wildcard = false)
+        public static function flush($event)
         {
-                        /** @var \Illuminate\Events\Dispatcher $instance */
-                        return $instance->makeListener($listener, $wildcard);
+                        /** @var \Lorisleiva\Actions\EventDispatcherDecorator $instance */
+                        return $instance->flush($event);
         }
         
         /**
-         * Create a class based listener using the IoC container.
+         * 
          *
-         * @param string $listener
-         * @param bool $wildcard
-         * @return \Closure 
-         * @static 
-         */ 
-        public static function createClassListener($listener, $wildcard = false)
-        {
-                        /** @var \Illuminate\Events\Dispatcher $instance */
-                        return $instance->createClassListener($listener, $wildcard);
-        }
-        
-        /**
-         * Remove a set of listeners from the dispatcher.
-         *
-         * @param string $event
-         * @return void 
          * @static 
          */ 
         public static function forget($event)
         {
-                        /** @var \Illuminate\Events\Dispatcher $instance */
-                        $instance->forget($event);
+                        /** @var \Lorisleiva\Actions\EventDispatcherDecorator $instance */
+                        return $instance->forget($event);
         }
         
         /**
-         * Forget all of the pushed listeners.
+         * 
          *
-         * @return void 
          * @static 
          */ 
         public static function forgetPushed()
         {
-                        /** @var \Illuminate\Events\Dispatcher $instance */
-                        $instance->forgetPushed();
-        }
-        
-        /**
-         * Set the queue resolver implementation.
-         *
-         * @param callable $resolver
-         * @return \Illuminate\Events\Dispatcher 
-         * @static 
-         */ 
-        public static function setQueueResolver($resolver)
-        {
-                        /** @var \Illuminate\Events\Dispatcher $instance */
-                        return $instance->setQueueResolver($resolver);
-        }
-        
-        /**
-         * Register a custom macro.
-         *
-         * @param string $name
-         * @param object|callable $macro
-         * @return void 
-         * @static 
-         */ 
-        public static function macro($name, $macro)
-        {
-                        \Illuminate\Events\Dispatcher::macro($name, $macro);
-        }
-        
-        /**
-         * Mix another object into the class.
-         *
-         * @param object $mixin
-         * @param bool $replace
-         * @return void 
-         * @throws \ReflectionException
-         * @static 
-         */ 
-        public static function mixin($mixin, $replace = true)
-        {
-                        \Illuminate\Events\Dispatcher::mixin($mixin, $replace);
-        }
-        
-        /**
-         * Checks if macro is registered.
-         *
-         * @param string $name
-         * @return bool 
-         * @static 
-         */ 
-        public static function hasMacro($name)
-        {
-                        return \Illuminate\Events\Dispatcher::hasMacro($name);
+                        /** @var \Lorisleiva\Actions\EventDispatcherDecorator $instance */
+                        return $instance->forgetPushed();
         }
         
         /**
@@ -6727,6 +6617,19 @@ namespace Illuminate\Support\Facades {
         {
                         /** @var \Illuminate\Http\Client\Factory $instance */
                         $instance->assertNothingSent();
+        }
+        
+        /**
+         * Assert how many requests have been recorded.
+         *
+         * @param $count
+         * @return void 
+         * @static 
+         */ 
+        public static function assertSentCount($count)
+        {
+                        /** @var \Illuminate\Http\Client\Factory $instance */
+                        $instance->assertSentCount($count);
         }
         
         /**
@@ -8674,6 +8577,40 @@ namespace Illuminate\Support\Facades {
         {
                         /** @var \Illuminate\Routing\Redirector $instance */
                         return $instance->route($route, $parameters, $status, $headers);
+        }
+        
+        /**
+         * Create a new redirect response to a signed named route.
+         *
+         * @param string $route
+         * @param mixed $parameters
+         * @param \DateTimeInterface|\DateInterval|int|null $expiration
+         * @param int $status
+         * @param array $headers
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function signedRoute($route, $parameters = [], $expiration = null, $status = 302, $headers = [])
+        {
+                        /** @var \Illuminate\Routing\Redirector $instance */
+                        return $instance->signedRoute($route, $parameters, $expiration, $status, $headers);
+        }
+        
+        /**
+         * Create a new redirect response to a signed named route.
+         *
+         * @param string $route
+         * @param \DateTimeInterface|\DateInterval|int|null $expiration
+         * @param mixed $parameters
+         * @param int $status
+         * @param array $headers
+         * @return \Illuminate\Http\RedirectResponse 
+         * @static 
+         */ 
+        public static function temporarySignedRoute($route, $expiration, $parameters = [], $status = 302, $headers = [])
+        {
+                        /** @var \Illuminate\Routing\Redirector $instance */
+                        return $instance->temporarySignedRoute($route, $expiration, $parameters, $status, $headers);
         }
         
         /**
@@ -11474,6 +11411,21 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
+         * Create a new Route object.
+         *
+         * @param array|string $methods
+         * @param string $uri
+         * @param mixed $action
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function newRoute($methods, $uri, $action)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->newRoute($methods, $uri, $action);
+        }
+        
+        /**
          * Return the response returned by the given route.
          *
          * @param string $name
@@ -12144,6 +12096,16 @@ namespace Illuminate\Support\Facades {
         {
                         return \Illuminate\Routing\Router::livewire($uri, $component);
         }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function actions($group)
+        {
+                        return \Illuminate\Routing\Router::actions($group);
+        }
          
     }
 
@@ -12163,21 +12125,8 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function hasTable($table)
         {
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         return $instance->hasTable($table);
-        }
-        
-        /**
-         * Get the column listing for a given table.
-         *
-         * @param string $table
-         * @return array 
-         * @static 
-         */ 
-        public static function getColumnListing($table)
-        {
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
-                        return $instance->getColumnListing($table);
         }
         
         /**
@@ -12188,7 +12137,7 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function dropAllTables()
         {
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         $instance->dropAllTables();
         }
         
@@ -12200,8 +12149,20 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function dropAllViews()
         {
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         $instance->dropAllViews();
+        }
+        
+        /**
+         * Drop all types from the database.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function dropAllTypes()
+        {
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
+                        $instance->dropAllTypes();
         }
         
         /**
@@ -12212,7 +12173,7 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getAllTables()
         {
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         return $instance->getAllTables();
         }
         
@@ -12224,8 +12185,33 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function getAllViews()
         {
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         return $instance->getAllViews();
+        }
+        
+        /**
+         * Get all of the type names for the database.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getAllTypes()
+        {
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
+                        return $instance->getAllTypes();
+        }
+        
+        /**
+         * Get the column listing for a given table.
+         *
+         * @param string $table
+         * @return array 
+         * @static 
+         */ 
+        public static function getColumnListing($table)
+        {
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
+                        return $instance->getColumnListing($table);
         }
         
         /**
@@ -12238,7 +12224,7 @@ namespace Illuminate\Support\Facades {
         public static function defaultStringLength($length)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-                        \Illuminate\Database\Schema\MySqlBuilder::defaultStringLength($length);
+                        \Illuminate\Database\Schema\PostgresBuilder::defaultStringLength($length);
         }
         
         /**
@@ -12252,7 +12238,7 @@ namespace Illuminate\Support\Facades {
         public static function hasColumn($table, $column)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         return $instance->hasColumn($table, $column);
         }
         
@@ -12267,7 +12253,7 @@ namespace Illuminate\Support\Facades {
         public static function hasColumns($table, $columns)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         return $instance->hasColumns($table, $columns);
         }
         
@@ -12282,7 +12268,7 @@ namespace Illuminate\Support\Facades {
         public static function getColumnType($table, $column)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         return $instance->getColumnType($table, $column);
         }
         
@@ -12297,7 +12283,7 @@ namespace Illuminate\Support\Facades {
         public static function table($table, $callback)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         $instance->table($table, $callback);
         }
         
@@ -12312,7 +12298,7 @@ namespace Illuminate\Support\Facades {
         public static function create($table, $callback)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         $instance->create($table, $callback);
         }
         
@@ -12326,7 +12312,7 @@ namespace Illuminate\Support\Facades {
         public static function drop($table)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         $instance->drop($table);
         }
         
@@ -12340,22 +12326,8 @@ namespace Illuminate\Support\Facades {
         public static function dropIfExists($table)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         $instance->dropIfExists($table);
-        }
-        
-        /**
-         * Drop all types from the database.
-         *
-         * @return void 
-         * @throws \LogicException
-         * @static 
-         */ 
-        public static function dropAllTypes()
-        {
-            //Method inherited from \Illuminate\Database\Schema\Builder            
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
-                        $instance->dropAllTypes();
         }
         
         /**
@@ -12369,7 +12341,7 @@ namespace Illuminate\Support\Facades {
         public static function rename($from, $to)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         $instance->rename($from, $to);
         }
         
@@ -12382,7 +12354,7 @@ namespace Illuminate\Support\Facades {
         public static function enableForeignKeyConstraints()
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         return $instance->enableForeignKeyConstraints();
         }
         
@@ -12395,7 +12367,7 @@ namespace Illuminate\Support\Facades {
         public static function disableForeignKeyConstraints()
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         return $instance->disableForeignKeyConstraints();
         }
         
@@ -12413,7 +12385,7 @@ namespace Illuminate\Support\Facades {
         public static function registerCustomDoctrineType($class, $name, $type)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         $instance->registerCustomDoctrineType($class, $name, $type);
         }
         
@@ -12426,7 +12398,7 @@ namespace Illuminate\Support\Facades {
         public static function getConnection()
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         return $instance->getConnection();
         }
         
@@ -12434,13 +12406,13 @@ namespace Illuminate\Support\Facades {
          * Set the database connection instance.
          *
          * @param \Illuminate\Database\Connection $connection
-         * @return \Illuminate\Database\Schema\MySqlBuilder 
+         * @return \Illuminate\Database\Schema\PostgresBuilder 
          * @static 
          */ 
         public static function setConnection($connection)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         return $instance->setConnection($connection);
         }
         
@@ -12454,7 +12426,7 @@ namespace Illuminate\Support\Facades {
         public static function blueprintResolver($resolver)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-                        /** @var \Illuminate\Database\Schema\MySqlBuilder $instance */
+                        /** @var \Illuminate\Database\Schema\PostgresBuilder $instance */
                         $instance->blueprintResolver($resolver);
         }
          
@@ -13445,7 +13417,8 @@ namespace Illuminate\Support\Facades {
          * @return bool 
          * @static 
          */ 
-        public static function prepend($path, $data, $separator = '')
+        public static function prepend($path, $data, $separator = '
+')
         {
                         /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
                         return $instance->prepend($path, $data, $separator);
@@ -13460,7 +13433,8 @@ namespace Illuminate\Support\Facades {
          * @return bool 
          * @static 
          */ 
-        public static function append($path, $data, $separator = '')
+        public static function append($path, $data, $separator = '
+')
         {
                         /** @var \Illuminate\Filesystem\FilesystemAdapter $instance */
                         return $instance->append($path, $data, $separator);
@@ -16518,6 +16492,1194 @@ namespace Laravel\Socialite\Facades {
  
 }
 
+namespace Collective\Html { 
+
+    /**
+     * 
+     *
+     * @see \Collective\Html\FormBuilder
+     */ 
+    class FormFacade {
+        
+        /**
+         * Open up a new HTML form.
+         *
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function open($options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->open($options);
+        }
+        
+        /**
+         * Create a new model based form builder.
+         *
+         * @param mixed $model
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function model($model, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->model($model, $options);
+        }
+        
+        /**
+         * Set the model instance on the form builder.
+         *
+         * @param mixed $model
+         * @return void 
+         * @static 
+         */ 
+        public static function setModel($model)
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        $instance->setModel($model);
+        }
+        
+        /**
+         * Get the current model instance on the form builder.
+         *
+         * @return mixed $model
+         * @static 
+         */ 
+        public static function getModel()
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->getModel();
+        }
+        
+        /**
+         * Close the current form.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function close()
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->close();
+        }
+        
+        /**
+         * Generate a hidden field with the current CSRF token.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function token()
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->token();
+        }
+        
+        /**
+         * Create a form label element.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @param bool $escape_html
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function label($name, $value = null, $options = [], $escape_html = true)
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->label($name, $value, $options, $escape_html);
+        }
+        
+        /**
+         * Create a form input field.
+         *
+         * @param string $type
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function input($type, $name, $value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->input($type, $name, $value, $options);
+        }
+        
+        /**
+         * Create a text input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function text($name, $value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->text($name, $value, $options);
+        }
+        
+        /**
+         * Create a password input field.
+         *
+         * @param string $name
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function password($name, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->password($name, $options);
+        }
+        
+        /**
+         * Create a range input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function range($name, $value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->range($name, $value, $options);
+        }
+        
+        /**
+         * Create a hidden input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function hidden($name, $value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->hidden($name, $value, $options);
+        }
+        
+        /**
+         * Create a search input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function search($name, $value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->search($name, $value, $options);
+        }
+        
+        /**
+         * Create an e-mail input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function email($name, $value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->email($name, $value, $options);
+        }
+        
+        /**
+         * Create a tel input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function tel($name, $value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->tel($name, $value, $options);
+        }
+        
+        /**
+         * Create a number input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function number($name, $value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->number($name, $value, $options);
+        }
+        
+        /**
+         * Create a date input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function date($name, $value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->date($name, $value, $options);
+        }
+        
+        /**
+         * Create a datetime input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function datetime($name, $value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->datetime($name, $value, $options);
+        }
+        
+        /**
+         * Create a datetime-local input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function datetimeLocal($name, $value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->datetimeLocal($name, $value, $options);
+        }
+        
+        /**
+         * Create a time input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function time($name, $value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->time($name, $value, $options);
+        }
+        
+        /**
+         * Create a url input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function url($name, $value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->url($name, $value, $options);
+        }
+        
+        /**
+         * Create a week input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function week($name, $value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->week($name, $value, $options);
+        }
+        
+        /**
+         * Create a file input field.
+         *
+         * @param string $name
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function file($name, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->file($name, $options);
+        }
+        
+        /**
+         * Create a textarea input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function textarea($name, $value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->textarea($name, $value, $options);
+        }
+        
+        /**
+         * Create a select box field.
+         *
+         * @param string $name
+         * @param array $list
+         * @param string|bool $selected
+         * @param array $selectAttributes
+         * @param array $optionsAttributes
+         * @param array $optgroupsAttributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function select($name, $list = [], $selected = null, $selectAttributes = [], $optionsAttributes = [], $optgroupsAttributes = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->select($name, $list, $selected, $selectAttributes, $optionsAttributes, $optgroupsAttributes);
+        }
+        
+        /**
+         * Create a select range field.
+         *
+         * @param string $name
+         * @param string $begin
+         * @param string $end
+         * @param string $selected
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function selectRange($name, $begin, $end, $selected = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->selectRange($name, $begin, $end, $selected, $options);
+        }
+        
+        /**
+         * Create a select year field.
+         *
+         * @param string $name
+         * @param string $begin
+         * @param string $end
+         * @param string $selected
+         * @param array $options
+         * @return mixed 
+         * @static 
+         */ 
+        public static function selectYear()
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->selectYear();
+        }
+        
+        /**
+         * Create a select month field.
+         *
+         * @param string $name
+         * @param string $selected
+         * @param array $options
+         * @param string $format
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function selectMonth($name, $selected = null, $options = [], $format = '%B')
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->selectMonth($name, $selected, $options, $format);
+        }
+        
+        /**
+         * Get the select option for the given value.
+         *
+         * @param string $display
+         * @param string $value
+         * @param string $selected
+         * @param array $attributes
+         * @param array $optgroupAttributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function getSelectOption($display, $value, $selected, $attributes = [], $optgroupAttributes = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->getSelectOption($display, $value, $selected, $attributes, $optgroupAttributes);
+        }
+        
+        /**
+         * Create a checkbox input field.
+         *
+         * @param string $name
+         * @param mixed $value
+         * @param bool $checked
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function checkbox($name, $value = 1, $checked = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->checkbox($name, $value, $checked, $options);
+        }
+        
+        /**
+         * Create a radio button input field.
+         *
+         * @param string $name
+         * @param mixed $value
+         * @param bool $checked
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function radio($name, $value = null, $checked = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->radio($name, $value, $checked, $options);
+        }
+        
+        /**
+         * Create a HTML reset input element.
+         *
+         * @param string $value
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function reset($value, $attributes = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->reset($value, $attributes);
+        }
+        
+        /**
+         * Create a HTML image input element.
+         *
+         * @param string $url
+         * @param string $name
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function image($url, $name = null, $attributes = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->image($url, $name, $attributes);
+        }
+        
+        /**
+         * Create a month input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function month($name, $value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->month($name, $value, $options);
+        }
+        
+        /**
+         * Create a color input field.
+         *
+         * @param string $name
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function color($name, $value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->color($name, $value, $options);
+        }
+        
+        /**
+         * Create a submit button element.
+         *
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function submit($value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->submit($value, $options);
+        }
+        
+        /**
+         * Create a button element.
+         *
+         * @param string $value
+         * @param array $options
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function button($value = null, $options = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->button($value, $options);
+        }
+        
+        /**
+         * Create a datalist box field.
+         *
+         * @param string $id
+         * @param array $list
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function datalist($id, $list = [])
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->datalist($id, $list);
+        }
+        
+        /**
+         * Get the ID attribute for a field name.
+         *
+         * @param string $name
+         * @param array $attributes
+         * @return string 
+         * @static 
+         */ 
+        public static function getIdAttribute($name, $attributes)
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->getIdAttribute($name, $attributes);
+        }
+        
+        /**
+         * Get the value that should be assigned to the field.
+         *
+         * @param string $name
+         * @param string $value
+         * @return mixed 
+         * @static 
+         */ 
+        public static function getValueAttribute($name, $value = null)
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->getValueAttribute($name, $value);
+        }
+        
+        /**
+         * Take Request in fill process
+         *
+         * @param bool $consider
+         * @static 
+         */ 
+        public static function considerRequest($consider = true)
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->considerRequest($consider);
+        }
+        
+        /**
+         * Get a value from the session's old input.
+         *
+         * @param string $name
+         * @return mixed 
+         * @static 
+         */ 
+        public static function old($name)
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->old($name);
+        }
+        
+        /**
+         * Determine if the old input is empty.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function oldInputIsEmpty()
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->oldInputIsEmpty();
+        }
+        
+        /**
+         * Get the session store implementation.
+         *
+         * @return \Illuminate\Contracts\Session\Session $session
+         * @static 
+         */ 
+        public static function getSessionStore()
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->getSessionStore();
+        }
+        
+        /**
+         * Set the session store implementation.
+         *
+         * @param \Illuminate\Contracts\Session\Session $session
+         * @return \Collective\Html\FormBuilder 
+         * @static 
+         */ 
+        public static function setSessionStore($session)
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->setSessionStore($session);
+        }
+        
+        /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+                        \Collective\Html\FormBuilder::macro($name, $macro);
+        }
+        
+        /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin, $replace = true)
+        {
+                        \Collective\Html\FormBuilder::mixin($mixin, $replace);
+        }
+        
+        /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+                        return \Collective\Html\FormBuilder::hasMacro($name);
+        }
+        
+        /**
+         * Dynamically handle calls to the class.
+         *
+         * @param string $method
+         * @param array $parameters
+         * @return mixed 
+         * @throws \BadMethodCallException
+         * @static 
+         */ 
+        public static function macroCall($method, $parameters)
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->macroCall($method, $parameters);
+        }
+        
+        /**
+         * Register a custom component.
+         *
+         * @param $name
+         * @param $view
+         * @param array $signature
+         * @return void 
+         * @static 
+         */ 
+        public static function component($name, $view, $signature)
+        {
+                        \Collective\Html\FormBuilder::component($name, $view, $signature);
+        }
+        
+        /**
+         * Check if a component is registered.
+         *
+         * @param $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasComponent($name)
+        {
+                        return \Collective\Html\FormBuilder::hasComponent($name);
+        }
+        
+        /**
+         * Dynamically handle calls to the class.
+         *
+         * @param string $method
+         * @param array $parameters
+         * @return \Illuminate\Contracts\View\View|mixed 
+         * @throws \BadMethodCallException
+         * @static 
+         */ 
+        public static function componentCall($method, $parameters)
+        {
+                        /** @var \Collective\Html\FormBuilder $instance */
+                        return $instance->componentCall($method, $parameters);
+        }
+         
+    }
+
+    /**
+     * 
+     *
+     * @see \Collective\Html\HtmlBuilder
+     */ 
+    class HtmlFacade {
+        
+        /**
+         * Convert an HTML string to entities.
+         *
+         * @param string $value
+         * @return string 
+         * @static 
+         */ 
+        public static function entities($value)
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->entities($value);
+        }
+        
+        /**
+         * Convert entities to HTML characters.
+         *
+         * @param string $value
+         * @return string 
+         * @static 
+         */ 
+        public static function decode($value)
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->decode($value);
+        }
+        
+        /**
+         * Generate a link to a JavaScript file.
+         *
+         * @param string $url
+         * @param array $attributes
+         * @param bool $secure
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function script($url, $attributes = [], $secure = null)
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->script($url, $attributes, $secure);
+        }
+        
+        /**
+         * Generate a link to a CSS file.
+         *
+         * @param string $url
+         * @param array $attributes
+         * @param bool $secure
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function style($url, $attributes = [], $secure = null)
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->style($url, $attributes, $secure);
+        }
+        
+        /**
+         * Generate an HTML image element.
+         *
+         * @param string $url
+         * @param string $alt
+         * @param array $attributes
+         * @param bool $secure
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function image($url, $alt = null, $attributes = [], $secure = null)
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->image($url, $alt, $attributes, $secure);
+        }
+        
+        /**
+         * Generate a link to a Favicon file.
+         *
+         * @param string $url
+         * @param array $attributes
+         * @param bool $secure
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function favicon($url, $attributes = [], $secure = null)
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->favicon($url, $attributes, $secure);
+        }
+        
+        /**
+         * Generate a HTML link.
+         *
+         * @param string $url
+         * @param string $title
+         * @param array $attributes
+         * @param bool $secure
+         * @param bool $escape
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function link($url, $title = null, $attributes = [], $secure = null, $escape = true)
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->link($url, $title, $attributes, $secure, $escape);
+        }
+        
+        /**
+         * Generate a HTTPS HTML link.
+         *
+         * @param string $url
+         * @param string $title
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function secureLink($url, $title = null, $attributes = [])
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->secureLink($url, $title, $attributes);
+        }
+        
+        /**
+         * Generate a HTML link to an asset.
+         *
+         * @param string $url
+         * @param string $title
+         * @param array $attributes
+         * @param bool $secure
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function linkAsset($url, $title = null, $attributes = [], $secure = null)
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->linkAsset($url, $title, $attributes, $secure);
+        }
+        
+        /**
+         * Generate a HTTPS HTML link to an asset.
+         *
+         * @param string $url
+         * @param string $title
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function linkSecureAsset($url, $title = null, $attributes = [])
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->linkSecureAsset($url, $title, $attributes);
+        }
+        
+        /**
+         * Generate a HTML link to a named route.
+         *
+         * @param string $name
+         * @param string $title
+         * @param array $parameters
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function linkRoute($name, $title = null, $parameters = [], $attributes = [])
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->linkRoute($name, $title, $parameters, $attributes);
+        }
+        
+        /**
+         * Generate a HTML link to a controller action.
+         *
+         * @param string $action
+         * @param string $title
+         * @param array $parameters
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function linkAction($action, $title = null, $parameters = [], $attributes = [])
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->linkAction($action, $title, $parameters, $attributes);
+        }
+        
+        /**
+         * Generate a HTML link to an email address.
+         *
+         * @param string $email
+         * @param string $title
+         * @param array $attributes
+         * @param bool $escape
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function mailto($email, $title = null, $attributes = [], $escape = true)
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->mailto($email, $title, $attributes, $escape);
+        }
+        
+        /**
+         * Obfuscate an e-mail address to prevent spam-bots from sniffing it.
+         *
+         * @param string $email
+         * @return string 
+         * @static 
+         */ 
+        public static function email($email)
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->email($email);
+        }
+        
+        /**
+         * Generates non-breaking space entities based on number supplied.
+         *
+         * @param int $num
+         * @return string 
+         * @static 
+         */ 
+        public static function nbsp($num = 1)
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->nbsp($num);
+        }
+        
+        /**
+         * Generate an ordered list of items.
+         *
+         * @param array $list
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString|string 
+         * @static 
+         */ 
+        public static function ol($list, $attributes = [])
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->ol($list, $attributes);
+        }
+        
+        /**
+         * Generate an un-ordered list of items.
+         *
+         * @param array $list
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString|string 
+         * @static 
+         */ 
+        public static function ul($list, $attributes = [])
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->ul($list, $attributes);
+        }
+        
+        /**
+         * Generate a description list of items.
+         *
+         * @param array $list
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function dl($list, $attributes = [])
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->dl($list, $attributes);
+        }
+        
+        /**
+         * Build an HTML attribute string from an array.
+         *
+         * @param array $attributes
+         * @return string 
+         * @static 
+         */ 
+        public static function attributes($attributes)
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->attributes($attributes);
+        }
+        
+        /**
+         * Obfuscate a string to prevent spam-bots from sniffing it.
+         *
+         * @param string $value
+         * @return string 
+         * @static 
+         */ 
+        public static function obfuscate($value)
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->obfuscate($value);
+        }
+        
+        /**
+         * Generate a meta tag.
+         *
+         * @param string $name
+         * @param string $content
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function meta($name, $content, $attributes = [])
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->meta($name, $content, $attributes);
+        }
+        
+        /**
+         * Generate an html tag.
+         *
+         * @param string $tag
+         * @param mixed $content
+         * @param array $attributes
+         * @return \Illuminate\Support\HtmlString 
+         * @static 
+         */ 
+        public static function tag($tag, $content, $attributes = [])
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->tag($tag, $content, $attributes);
+        }
+        
+        /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+                        \Collective\Html\HtmlBuilder::macro($name, $macro);
+        }
+        
+        /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin, $replace = true)
+        {
+                        \Collective\Html\HtmlBuilder::mixin($mixin, $replace);
+        }
+        
+        /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+                        return \Collective\Html\HtmlBuilder::hasMacro($name);
+        }
+        
+        /**
+         * Dynamically handle calls to the class.
+         *
+         * @param string $method
+         * @param array $parameters
+         * @return mixed 
+         * @throws \BadMethodCallException
+         * @static 
+         */ 
+        public static function macroCall($method, $parameters)
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->macroCall($method, $parameters);
+        }
+        
+        /**
+         * Register a custom component.
+         *
+         * @param $name
+         * @param $view
+         * @param array $signature
+         * @return void 
+         * @static 
+         */ 
+        public static function component($name, $view, $signature)
+        {
+                        \Collective\Html\HtmlBuilder::component($name, $view, $signature);
+        }
+        
+        /**
+         * Check if a component is registered.
+         *
+         * @param $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasComponent($name)
+        {
+                        return \Collective\Html\HtmlBuilder::hasComponent($name);
+        }
+        
+        /**
+         * Dynamically handle calls to the class.
+         *
+         * @param string $method
+         * @param array $parameters
+         * @return \Illuminate\Contracts\View\View|mixed 
+         * @throws \BadMethodCallException
+         * @static 
+         */ 
+        public static function componentCall($method, $parameters)
+        {
+                        /** @var \Collective\Html\HtmlBuilder $instance */
+                        return $instance->componentCall($method, $parameters);
+        }
+         
+    }
+ 
+}
+
 namespace Livewire { 
 
     /**
@@ -16943,7 +18105,7 @@ namespace Maatwebsite\Excel\Facades {
          * @param string $event
          * @static 
          */ 
-        public static function extend($concern, $handler, $event = 'Maatwebsite\Excel\Events\BeforeWriting')
+        public static function extend($concern, $handler, $event = 'Maatwebsite\\Excel\\Events\\BeforeWriting')
         {
                         return \Maatwebsite\Excel\Excel::extend($concern, $handler, $event);
         }
@@ -17027,6 +18189,661 @@ namespace Maatwebsite\Excel\Facades {
         {
                         /** @var \Maatwebsite\Excel\Fakes\ExcelFake $instance */
                         return $instance->assertImported($filePath, $disk, $callback);
+        }
+         
+    }
+ 
+}
+
+namespace ttungbmt\REST\Geoserver { 
+
+    /**
+     * 
+     *
+     */ 
+    class Facade {
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function workspaces()
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->workspaces();
+        }
+        
+        /**
+         * Retrieve the workspace information.
+         *
+         * @param string $name
+         * @return \OneOffTech\GeoServer\Models\Workspace 
+         * @uses the workspace specified during client instantiation
+         * @static 
+         */ 
+        public static function workspace($name = '')
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->workspace($name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getWorkspaceName($name = '')
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->getWorkspaceName($name);
+        }
+        
+        /**
+         * Create the configured workspace, if not existing
+         *
+         * @param string $name
+         * @return \OneOffTech\GeoServer\Models\Workspace 
+         * @throws ErrorResponseException
+         * @uses the workspace specified during client instantiation
+         * @static 
+         */ 
+        public static function createWorkspace($name = '')
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->createWorkspace($name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function updateWorkspace($data, $name = '')
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->updateWorkspace($data, $name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function deleteWorkspace($name = '')
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->deleteWorkspace($name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function createDatastore($data)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->createDatastore($data);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function updateDatastore($name, $data)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->updateDatastore($name, $data);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function layers()
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->layers();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function layer($name)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->layer($name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function createLayer($datastore, $name)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->createLayer($datastore, $name);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function updateLayer($name, $data)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->updateLayer($name, $data);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function deleteLayer($name)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->deleteLayer($name);
+        }
+        
+        /**
+         * Build a GeoServer client
+         *
+         * @param string $url The GeoServer instance URL
+         * @param string $workspace The GeoServer workspace to use
+         * @param \ttungbmt\REST\Geoserver\Authentication $authentication The authentication credentials, if necessary
+         * @return \GeoServer 
+         * @static 
+         */ 
+        public static function build($url, $workspace, $authentication = null)
+        {
+                        return \ttungbmt\REST\Geoserver\Geoserver::build($url, $workspace, $authentication);
+        }
+        
+        /**
+         * Get the GeoServer version
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function version()
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->version();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function manifest()
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->manifest();
+        }
+        
+        /**
+         * Retrieve the list of datastores defined in the workspace.
+         * 
+         * A data store contains vector format spatial data.
+         *
+         * @uses the workspace specified during client instantiation
+         * @return \OneOffTech\GeoServer\Models\DataStore[] 
+         * @static 
+         */ 
+        public static function datastores()
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->datastores();
+        }
+        
+        /**
+         * Retrieve the details of a data store.
+         * 
+         * A data store contains vector format spatial data. It can be a file (such as a shapefile),...
+         *
+         * @param string $name The data store name
+         * @return \OneOffTech\GeoServer\Models\DataStore 
+         * @throws ErrorResponseException
+         * @throws StoreNotFoundException
+         * @uses the workspace specified during client instantiation
+         * @static 
+         */ 
+        public static function datastore($name)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->datastore($name);
+        }
+        
+        /**
+         * Delete a data store
+         *
+         * @param string $name The data store name
+         * @return \OneOffTech\GeoServer\Models\DataStore 
+         * @throws \OneOffTech\GeoServer\Exception\StoreNotFoundException if the data store to remove do not exists*@throws ErrorResponseException
+         * @throws ErrorResponseException
+         * @uses the workspace specified during client instantiation
+         * @static 
+         */ 
+        public static function deleteDatastore($name)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->deleteDatastore($name);
+        }
+        
+        /**
+         * A feature is a vector based spatial resource or data set that originates from a data store.
+         * 
+         * In some cases, such as with a shapefile, a feature type has a one-to-one relationship with its
+         * data store. In other cases, such as PostGIS, the relationship of feature type to data store
+         * is many-to-one, feature types corresponding to a table in the database.
+         *
+         * @param string $datastore The datastore from which retrieve the
+         * @param string $name The feature name to retrieve
+         * @return \OneOffTech\GeoServer\Models\Feature 
+         * @static 
+         */ 
+        public static function feature($datastore, $name = null)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->feature($datastore, $name);
+        }
+        
+        /**
+         * Retrieve the list of coverage stores defined in the workspace.
+         * 
+         * A data store contains raster format spatial data.
+         *
+         * @uses the workspace specified during client instantiation
+         * @return \OneOffTech\GeoServer\Models\CoverageStore[] 
+         * @static 
+         */ 
+        public static function coveragestores()
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->coveragestores();
+        }
+        
+        /**
+         * Retrieve the details of a coverage store.
+         * 
+         * A coverage store describes how access a raster data source.
+         *
+         * @uses the workspace specified during client instantiation
+         * @param string $name The coverage store name
+         * @return \OneOffTech\GeoServer\Models\CoverageStore 
+         * @static 
+         */ 
+        public static function coveragestore($name)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->coveragestore($name);
+        }
+        
+        /**
+         * Retrieve the details of a coverage.
+         * 
+         * A coverage is a raster data set which originates from a coverage store.
+         *
+         * @uses the workspace specified during client instantiation
+         * @param string $coveragestore The coverage store from which retrieve the coverage
+         * @param string $name The coverage name to retrieve
+         * @return \OneOffTech\GeoServer\Models\Coverage 
+         * @static 
+         */ 
+        public static function coverage($coveragestore, $name = null)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->coverage($coveragestore, $name);
+        }
+        
+        /**
+         * Delete a coverage store
+         *
+         * @uses the workspace specified during client instantiation
+         * @param string $name The coverage store name
+         * @return \OneOffTech\GeoServer\Models\CoverageStore 
+         * @throws \OneOffTech\GeoServer\Exception\StoreNotFoundException if the coverage store to remove do not exists
+         * @static 
+         */ 
+        public static function deleteCoveragestore($name)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->deleteCoveragestore($name);
+        }
+        
+        /**
+         * Upload a file to the pertaining store
+         * 
+         * Vector data will be added to a data store
+         * Raster data will be added to a coverage store
+         *
+         * @param \ttungbmt\REST\Geoserver\GeoFile $file
+         * @return \OneOffTech\GeoServer\Models\Resource The resource that was uploaded. Can be a Coverage for raster data or Feature for vector data
+         * @static 
+         */ 
+        public static function upload($file)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->upload($file);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function details($file)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->details($file);
+        }
+        
+        /**
+         * Check if a specified GeoFile was uploaded to the Geoserver
+         * The check will attempt to find the store that matches the given name
+         *
+         * @param \ttungbmt\REST\Geoserver\GeoFile $file
+         * @return bool 
+         * @static 
+         */ 
+        public static function exist($file)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->exist($file);
+        }
+        
+        /**
+         * Delete a GeoFile from the GeoServer instance
+         * 
+         * Deletes the corresponding store based on the GeoType format
+         *
+         * @param \ttungbmt\REST\Geoserver\GeoFile $data The GeoFile to delete
+         * @return bool 
+         * @throws \OneOffTech\GeoServer\Exception\StoreNotFoundException if the store, that corresponds to the file, do not exists
+         * @static 
+         */ 
+        public static function remove($data)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->remove($data);
+        }
+        
+        /**
+         * Get the Web Map Service (WMS) map URL for the specified resource
+         *
+         * @param \ttungbmt\REST\Geoserver\GeoFile|Resource  data the data you want to obtain the WMS url for. If a GeoFile is passed, the corresponding resource is retrieved from the geoserver, if found
+         * @param \ttungbmt\REST\Geoserver\WmsOption $wmsOptions The options to configure the WMS output
+         * @static 
+         */ 
+        public static function wmsMapUrl($data, $wmsOptions = null)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->wmsMapUrl($data, $wmsOptions);
+        }
+        
+        /**
+         * Attempt to retrieve a thumbnail of a previously uploaded
+         * GeoFile or Resource using the Web Map Service
+         *
+         * @param \ttungbmt\REST\Geoserver\GeoFile|Resource  data the data you want to obtain the WMS url for. If a GeoFile is passed, the corresponding resource is retrieved from the geoserver, if found
+         * @return resource A resource
+         * @static 
+         */ 
+        public static function thumbnail($data, $width = 300, $height = 300)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->thumbnail($data, $width, $height);
+        }
+        
+        /**
+         * Get a style by its name.
+         * 
+         * The style must be in the current workspace
+         *
+         * @param string $name
+         * @return \OneOffTech\GeoServer\Models\Style 
+         * @throws StyleNotFoundException if the style with the given name cannot be found
+         * @throws ErrorResponseException for communication errors with the GeoServer
+         * @static 
+         */ 
+        public static function style($name)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->style($name);
+        }
+        
+        /**
+         * Get all the styles defined in the current workspace
+         *
+         * @return \OneOffTech\GeoServer\Models\Style[] 
+         * @static 
+         */ 
+        public static function styles()
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->styles();
+        }
+        
+        /**
+         * Upload a SLD style to the workspace
+         *
+         * @param \ttungbmt\REST\Geoserver\StyleFile $file The style file
+         * @return \OneOffTech\GeoServer\Models\Style the uploaded style details
+         * @throws StyleAlreadyExistsException
+         * @static 
+         */ 
+        public static function uploadStyle($file)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->uploadStyle($file);
+        }
+        
+        /**
+         * Remove a style from the workspace, given its name
+         *
+         * @param string $name the name of the style to remove. It must be in the workspace
+         * @return \OneOffTech\GeoServer\Models\Style 
+         * @throws StyleNotFoundException if the style with the given name cannot be found
+         * @throws ErrorResponseException for communication errors with the GeoServer
+         * @static 
+         */ 
+        public static function removeStyle($name)
+        {
+                        /** @var \ttungbmt\REST\Geoserver\Geoserver $instance */
+                        return $instance->removeStyle($name);
+        }
+         
+    }
+ 
+}
+
+namespace Yajra\DataTables\Facades { 
+
+    /**
+     * 
+     *
+     * @mixin \Yajra\DataTables\DataTables
+     * @see \Yajra\DataTables\DataTables
+     */ 
+    class DataTables {
+        
+        /**
+         * Make a DataTable instance from source.
+         * 
+         * Alias of make for backward compatibility.
+         *
+         * @param mixed $source
+         * @return mixed 
+         * @throws \Exception
+         * @static 
+         */ 
+        public static function of($source)
+        {
+                        return \Yajra\DataTables\DataTables::of($source);
+        }
+        
+        /**
+         * Make a DataTable instance from source.
+         *
+         * @param mixed $source
+         * @return mixed 
+         * @throws \Exception
+         * @static 
+         */ 
+        public static function make($source)
+        {
+                        return \Yajra\DataTables\DataTables::make($source);
+        }
+        
+        /**
+         * Get request object.
+         *
+         * @return \Yajra\DataTables\Utilities\Request 
+         * @static 
+         */ 
+        public static function getRequest()
+        {
+                        /** @var \Yajra\DataTables\DataTables $instance */
+                        return $instance->getRequest();
+        }
+        
+        /**
+         * Get config instance.
+         *
+         * @return \Yajra\DataTables\Utilities\Config 
+         * @static 
+         */ 
+        public static function getConfig()
+        {
+                        /** @var \Yajra\DataTables\DataTables $instance */
+                        return $instance->getConfig();
+        }
+        
+        /**
+         * 
+         *
+         * @deprecated Please use query() instead, this method will be removed in a next version.
+         * @param $builder
+         * @return \Yajra\DataTables\QueryDataTable 
+         * @static 
+         */ 
+        public static function queryBuilder($builder)
+        {
+                        /** @var \Yajra\DataTables\DataTables $instance */
+                        return $instance->queryBuilder($builder);
+        }
+        
+        /**
+         * DataTables using Query.
+         *
+         * @param \Illuminate\Database\Query\Builder|mixed $builder
+         * @return \Yajra\DataTables\DataTableAbstract|\Yajra\DataTables\QueryDataTable 
+         * @static 
+         */ 
+        public static function query($builder)
+        {
+                        /** @var \Yajra\DataTables\DataTables $instance */
+                        return $instance->query($builder);
+        }
+        
+        /**
+         * DataTables using Eloquent Builder.
+         *
+         * @param \Illuminate\Database\Eloquent\Builder|mixed $builder
+         * @return \Yajra\DataTables\DataTableAbstract|\Yajra\DataTables\EloquentDataTable 
+         * @static 
+         */ 
+        public static function eloquent($builder)
+        {
+                        /** @var \Yajra\DataTables\DataTables $instance */
+                        return $instance->eloquent($builder);
+        }
+        
+        /**
+         * DataTables using Collection.
+         *
+         * @param \Illuminate\Support\Collection|array $collection
+         * @return \Yajra\DataTables\DataTableAbstract|\Yajra\DataTables\CollectionDataTable 
+         * @static 
+         */ 
+        public static function collection($collection)
+        {
+                        /** @var \Yajra\DataTables\DataTables $instance */
+                        return $instance->collection($collection);
+        }
+        
+        /**
+         * DataTables using Collection.
+         *
+         * @param \Illuminate\Http\Resources\Json\AnonymousResourceCollection|array $collection
+         * @return \Yajra\DataTables\DataTableAbstract|\Yajra\DataTables\ApiResourceDataTable 
+         * @static 
+         */ 
+        public static function resource($resource)
+        {
+                        /** @var \Yajra\DataTables\DataTables $instance */
+                        return $instance->resource($resource);
+        }
+        
+        /**
+         * Get html builder instance.
+         *
+         * @return \Yajra\DataTables\Html\Builder 
+         * @throws \Exception
+         * @static 
+         */ 
+        public static function getHtmlBuilder()
+        {
+                        /** @var \Yajra\DataTables\DataTables $instance */
+                        return $instance->getHtmlBuilder();
+        }
+        
+        /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+                        \Yajra\DataTables\DataTables::macro($name, $macro);
+        }
+        
+        /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin, $replace = true)
+        {
+                        \Yajra\DataTables\DataTables::mixin($mixin, $replace);
+        }
+        
+        /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+                        return \Yajra\DataTables\DataTables::hasMacro($name);
         }
          
     }
@@ -19970,9 +21787,17 @@ namespace  {
 
     class Socialite extends \Laravel\Socialite\Facades\Socialite {}
 
+    class Form extends \Collective\Html\FormFacade {}
+
+    class Html extends \Collective\Html\HtmlFacade {}
+
     class Livewire extends \Livewire\Livewire {}
 
     class Excel extends \Maatwebsite\Excel\Facades\Excel {}
+
+    class Geoserver extends \ttungbmt\REST\Geoserver\Facade {}
+
+    class DataTables extends \Yajra\DataTables\Facades\DataTables {}
  
 }
 

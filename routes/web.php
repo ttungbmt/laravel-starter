@@ -1,5 +1,6 @@
 <?php
 
+use App\GeoFile;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
@@ -17,19 +18,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home', 'HomeController@index')->name('home');
+Route::redirect('admin', '/home');
 
-Route::livewire('/app-form', 'app-form');
-Route::livewire('/app-form/{model?}', 'app-form');
-
-//Route::resource('/geo-file', 'GeoFileController')->except(['update', 'store']);
-//Route::livewire('/geo-file', 'geofile-form');
-//Route::livewire('/geo-file/form/{model?}', 'geofile-form');
+Route::prefix('admin')->namespace('Admin')->group(function () {
+    Route::resource('geo-file', 'GeoFileController');
+    Route::get('maps', 'MapController@index');
+});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/home', 'HomeController@store');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

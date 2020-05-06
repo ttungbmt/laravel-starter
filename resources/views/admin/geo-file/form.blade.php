@@ -2,6 +2,10 @@
 
 @section('content')
     <div class="container">
-        <livewire:geofile-form :model="$model"/>
+
     </div>
 @endsection
+
+@push('scripts')
+
+@endpush

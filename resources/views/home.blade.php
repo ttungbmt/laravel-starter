@@ -14,15 +14,12 @@
                         </div>
                     @endif
                     You are logged in!
+
                 </div>
             </div>
         </div>
     </div>
     <hr>
-
-
-    <livewire:app-form :model="$model"/>
-
 
 
 </div>

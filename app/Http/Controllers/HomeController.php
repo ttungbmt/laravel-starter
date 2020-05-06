@@ -1,9 +1,7 @@
 <?php
-
 namespace App\Http\Controllers;
 
-use App\GeoFile;
-use Illuminate\Http\Request;
+use Geoserver;
 
 class HomeController extends Controller
 {
@@ -24,12 +22,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $model = GeoFile::first();
-        return view('home', compact('model'));
+        $geoserver = GeoServer::version();
+
+        return view('home');
     }
 
-    public function store(Request $request)
-    {
-        $request->validate(['name' => 'required|email']);
-    }
+
 }
